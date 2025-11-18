@@ -30,8 +30,15 @@ export default function Navigation() {
 
         {/* Desktop CTAs */}
         <div className="nav-right">
-          <button className="btn-outline">Audit Your Page</button>
-          <button className="btn-primary">Contact Us</button>
+          <button 
+            className="btn-primary"
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+              contactSection?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            Contact Us
+          </button>
         </div>
 
         {/* Mobile Hamburger */}
@@ -56,10 +63,14 @@ export default function Navigation() {
               </a>
             ))}
             <div className="mobile-ctas">
-              <button className="btn-outline" onClick={() => setIsMobileMenuOpen(false)}>
-                Audit Your Page
-              </button>
-              <button className="btn-primary" onClick={() => setIsMobileMenuOpen(false)}>
+              <button 
+                className="btn-primary" 
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  const contactSection = document.getElementById('contact');
+                  contactSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Contact Us
               </button>
             </div>
