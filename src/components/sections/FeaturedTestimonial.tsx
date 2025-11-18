@@ -1,11 +1,12 @@
 import { Card } from "@/components/ui/card";
-import { Users, TrendingUp, Heart } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function FeaturedTestimonial() {
   return (
     <section className="py-20 xl:py-32 bg-secondary/30">
       <div className="container mx-auto px-4 xl:px-8">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 items-center">
+          {/* Left: Video Player */}
           <div className="relative aspect-video rounded-[1.75rem] overflow-hidden shadow-float">
             <img 
               src="https://miaoda-site-img.s3cdn.medo.dev/images/59a88efd-b9dd-45d2-9af9-2c5dae8a5382.jpg"
@@ -19,45 +20,53 @@ export default function FeaturedTestimonial() {
             </div>
           </div>
           
-          <Card className="gradient-border p-8 xl:p-12 bg-foreground text-background" style={{ borderRadius: '1.75rem' }}>
-            <div className="space-y-8">
+          {/* Right: Long-Form Video Production Card */}
+          <Card className="gradient-border p-10 xl:p-12 bg-background" style={{ borderRadius: '1.75rem' }}>
+            <div className="space-y-6">
+              {/* Heading */}
               <div>
-                <h3 className="text-3xl xl:text-4xl font-bold mb-4">
-                  "Sinox Media transformed our brand presence"
+                <h3 className="text-3xl xl:text-4xl font-bold mb-4 text-foreground">
+                  Long-Form Video Production
                 </h3>
-                <p className="text-lg opacity-80">
-                  Working with Sinox Media has been a game-changer for our content strategy. 
-                  Their attention to detail and creative vision exceeded all expectations.
+                <p className="text-base xl:text-lg text-muted-foreground leading-relaxed">
+                  Create compelling long-form content that captivates your audience. 
+                  From documentaries to in-depth tutorials, we craft stories that resonate 
+                  and drive meaningful engagement.
                 </p>
               </div>
               
-              <div className="grid grid-cols-3 gap-6">
-                <div className="text-center">
-                  <div className="flex items-center justify-center mb-2">
-                    <Users className="w-6 h-6 text-primary" />
-                  </div>
-                  <div className="text-2xl font-bold">500K+</div>
-                  <div className="text-sm opacity-70">Followers</div>
-                </div>
-                <div className="text-center">
-                  <div className="flex items-center justify-center mb-2">
-                    <TrendingUp className="w-6 h-6 text-primary" />
-                  </div>
-                  <div className="text-2xl font-bold">250%</div>
-                  <div className="text-sm opacity-70">Growth</div>
-                </div>
-                <div className="text-center">
-                  <div className="flex items-center justify-center mb-2">
-                    <Heart className="w-6 h-6 text-primary" />
-                  </div>
-                  <div className="text-2xl font-bold">15M+</div>
-                  <div className="text-sm opacity-70">Engagement</div>
-                </div>
-              </div>
+              {/* Bullet List */}
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <span className="text-foreground">Professional scripting and storyboarding</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <span className="text-foreground">High-quality cinematography and editing</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <span className="text-foreground">Strategic content optimization for platforms</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <span className="text-foreground">End-to-end production management</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <span className="text-foreground">Dedicated creative team support</span>
+                </li>
+              </ul>
               
-              <div className="pt-4 border-t border-background/20">
-                <p className="font-semibold text-lg">Sarah Johnson</p>
-                <p className="opacity-70">CEO, TechVentures Inc.</p>
+              {/* CTA Button */}
+              <div className="pt-4">
+                <Button 
+                  className="w-full py-6 text-base font-bold rounded-xl shadow-glow hover:shadow-glow-hover transition-smooth hover:-translate-y-0.5"
+                  style={{ backgroundColor: '#FF2E2E' }}
+                >
+                  Start Your Long-Form Project
+                </Button>
               </div>
             </div>
           </Card>
