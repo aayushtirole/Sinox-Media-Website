@@ -111,79 +111,19 @@ export default function Portfolio() {
       {/* LONG-FORM PORTFOLIO */}
       <section id="longform" className="py-20 xl:py-32 bg-background">
         <div className="container mx-auto px-4 xl:px-8">
-          {/* Two-Column Layout */}
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 items-center mb-16">
-            {/* Left: Video Thumbnail - Portrait Format */}
-            <div className="relative aspect-[9/16] max-w-md mx-auto xl:mx-0 rounded-[1.5rem] overflow-hidden shadow-float group cursor-pointer">
-              <img 
-                src="https://miaoda-site-img.s3cdn.medo.dev/images/59a88efd-b9dd-45d2-9af9-2c5dae8a5382.jpg"
-                alt="Long-form video sample"
-                className="w-full h-full object-cover transition-smooth group-hover:scale-105"
-              />
-              <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                <div className="w-20 h-20 rounded-full bg-primary/90 backdrop-blur-sm flex items-center justify-center hover:scale-110 transition-smooth shadow-glow">
-                  <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent ml-1" />
-                </div>
-              </div>
-            </div>
-            
-            {/* Right: Content Card */}
-            <Card className="gradient-border p-10 xl:p-12 bg-background" style={{ borderRadius: '1.5rem' }}>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-3xl xl:text-4xl font-bold mb-4 text-foreground">
-                    Long-Form Videos & Podcasts
-                  </h3>
-                  <p className="text-base xl:text-lg text-muted-foreground leading-relaxed">
-                    High-quality long-form editing for YouTube, podcasts and brand documentaries—full 
-                    episodes, interviews, multi-camera shoots, and repurposed shorts.
-                  </p>
-                </div>
-                
-                {/* Bulleted List */}
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <span className="text-foreground">Full YouTube edits (8–20 mins)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <span className="text-foreground">Podcast episode editing & mixing</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <span className="text-foreground">Multi-camera sync & B-roll</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <span className="text-foreground">Audio cleanup & mastering</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <span className="text-foreground">Repurpose clips for shorts</span>
-                  </li>
-                </ul>
-                
-                {/* CTA Button */}
-                <div className="pt-4">
-                  <Button 
-                    className="w-full py-6 text-base font-bold rounded-xl shadow-glow hover:shadow-glow-hover transition-smooth hover:-translate-y-0.5"
-                    style={{ backgroundColor: '#FF2E2E' }}
-                  >
-                    View Long-Form Samples
-                  </Button>
-                </div>
-              </div>
-            </Card>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl xl:text-5xl font-bold mb-4">
+              Long-Form Videos & Podcasts
+            </h2>
           </div>
           
-          {/* Gallery Row */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Simple 3-Video Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {longFormSamples.map((sample, index) => (
               <Card 
                 key={index}
                 className="overflow-hidden group cursor-pointer hover:shadow-float transition-smooth"
-                style={{ borderRadius: '1rem' }}
+                style={{ borderRadius: '1.5rem' }}
               >
                 <div className="relative aspect-video overflow-hidden">
                   <img 
@@ -191,10 +131,10 @@ export default function Portfolio() {
                     alt={sample.title}
                     className="w-full h-full object-cover transition-smooth group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3">
-                    <p className="text-white font-semibold text-sm mb-1">{sample.title}</p>
-                    <Badge className="bg-primary/90 text-white border-0 text-xs">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <p className="text-white font-bold text-base mb-2">{sample.title}</p>
+                    <Badge className="bg-primary/90 text-white border-0 text-sm">
                       {sample.duration}
                     </Badge>
                   </div>
