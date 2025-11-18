@@ -1,7 +1,6 @@
 import Navigation from "@/components/sections/Navigation";
 import Hero from "@/components/sections/Hero";
 import Portfolio from "@/components/sections/Portfolio";
-import FeaturedTestimonial from "@/components/sections/FeaturedTestimonial";
 import Services from "@/components/sections/Services";
 import WaveGoodbye from "@/components/sections/WaveGoodbye";
 import Pricing from "@/components/sections/Pricing";
@@ -19,7 +18,6 @@ export default function Index() {
         <Hero />
       </div>
       <Portfolio />
-      <FeaturedTestimonial />
       <div id="process">
         <Services />
       </div>
