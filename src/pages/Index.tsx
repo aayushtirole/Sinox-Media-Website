@@ -5,7 +5,6 @@ import FeaturedTestimonial from "@/components/sections/FeaturedTestimonial";
 import MorePortfolio from "@/components/sections/MorePortfolio";
 import Services from "@/components/sections/Services";
 import WaveGoodbye from "@/components/sections/WaveGoodbye";
-import SocialProof from "@/components/sections/SocialProof";
 import Pricing from "@/components/sections/Pricing";
 import About from "@/components/sections/About";
 import Comparison from "@/components/sections/Comparison";
@@ -29,7 +28,6 @@ export default function Index() {
         <Services />
       </div>
       <WaveGoodbye />
-      <SocialProof />
       <div id="pricing">
         <Pricing />
       </div>
