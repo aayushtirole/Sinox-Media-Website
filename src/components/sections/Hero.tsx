@@ -33,6 +33,10 @@ export default function Hero() {
             <Button 
               size="lg" 
               className="px-8 py-6 text-lg rounded-full bg-primary hover:bg-primary-hover shadow-glow transition-smooth"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                contactSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               Book Your Call
             </Button>
@@ -40,6 +44,10 @@ export default function Hero() {
               size="lg" 
               variant="outline" 
               className="px-8 py-6 text-lg rounded-full border-2 transition-smooth"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                contactSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               Contact Us
             </Button>

@@ -8,6 +8,7 @@ import About from "@/components/sections/About";
 import Comparison from "@/components/sections/Comparison";
 import IndustryInsights from "@/components/sections/IndustryInsights";
 import FAQ from "@/components/sections/FAQ";
+import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 
 export default function Index() {
@@ -31,6 +32,7 @@ export default function Index() {
       <Comparison />
       <IndustryInsights />
       <FAQ />
+      <Contact />
       <Footer />
     </div>
   );
