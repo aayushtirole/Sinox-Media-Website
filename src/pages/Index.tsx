@@ -1,3 +1,4 @@
+import Navigation from "@/components/sections/Navigation";
 import Hero from "@/components/sections/Hero";
 import Portfolio from "@/components/sections/Portfolio";
 import FeaturedTestimonial from "@/components/sections/FeaturedTestimonial";
@@ -16,16 +17,27 @@ import Footer from "@/components/sections/Footer";
 export default function Index() {
   return (
     <div className="min-h-screen">
-      <Hero />
-      <Portfolio />
+      <Navigation />
+      <div id="home">
+        <Hero />
+      </div>
+      <div id="portfolio">
+        <Portfolio />
+      </div>
       <FeaturedTestimonial />
       <MorePortfolio />
-      <Services />
+      <div id="process">
+        <Services />
+      </div>
       <WaveGoodbye />
       <Testimonials />
       <SocialProof />
-      <Pricing />
-      <About />
+      <div id="pricing">
+        <Pricing />
+      </div>
+      <div id="about">
+        <About />
+      </div>
       <Comparison />
       <IndustryInsights />
       <FAQ />
