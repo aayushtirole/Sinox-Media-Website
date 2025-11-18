@@ -113,8 +113,8 @@ export default function Portfolio() {
         <div className="container mx-auto px-4 xl:px-8">
           {/* Two-Column Layout */}
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 items-center mb-16">
-            {/* Left: Video Thumbnail */}
-            <div className="relative aspect-video rounded-[1.5rem] overflow-hidden shadow-float group cursor-pointer">
+            {/* Left: Video Thumbnail - Portrait Format */}
+            <div className="relative aspect-[9/16] max-w-md mx-auto xl:mx-0 rounded-[1.5rem] overflow-hidden shadow-float group cursor-pointer">
               <img 
                 src="https://miaoda-site-img.s3cdn.medo.dev/images/59a88efd-b9dd-45d2-9af9-2c5dae8a5382.jpg"
                 alt="Long-form video sample"
