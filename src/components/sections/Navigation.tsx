@@ -3,7 +3,7 @@ import { useState } from "react";
 const menuItems = [
   { label: "Home", href: "#home" },
   { label: "Process", href: "#process" },
-  { label: "Portfolio", href: "#portfolio" },
+  { label: "Portfolio", href: "#shortform" },
   { label: "Pricing", href: "#pricing" },
   { label: "About", href: "#about" }
 ];
