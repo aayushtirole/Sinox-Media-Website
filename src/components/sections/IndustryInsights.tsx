@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Video, Camera, Lightbulb, Package, Share2 } from "lucide-react";
 
 const tabs = [
@@ -65,15 +64,6 @@ const tabContent = {
   }
 };
 
-const badges = [
-  "Agile Workflow",
-  "Clear Communication",
-  "Data Security",
-  "Quality Assurance",
-  "Scalable Solutions",
-  "Expert Team"
-];
-
 export default function IndustryInsights() {
   const [activeTab, setActiveTab] = useState("content");
   const content = tabContent[activeTab as keyof typeof tabContent];
@@ -131,18 +121,6 @@ export default function IndustryInsights() {
               Start 2-Week Paid Trial
             </Button>
           </Card>
-          
-          <div className="flex flex-wrap justify-center gap-3">
-            {badges.map((badge, index) => (
-              <Badge 
-                key={index}
-                variant="secondary"
-                className="px-4 py-2 text-sm"
-              >
-                {badge}
-              </Badge>
-            ))}
-          </div>
         </div>
       </div>
     </section>
