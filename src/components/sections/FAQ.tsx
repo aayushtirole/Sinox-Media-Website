@@ -40,7 +40,7 @@ const faqData = [
   },
   {
     question: "How do I get started?",
-    answer: "Getting started is easy! Click the 'Book Your Call' button to schedule a free consultation. We'll discuss your needs, goals, and how we can help. From there, we'll create a custom plan and timeline for your project."
+    answer: "Getting started is easy! Click the 'Contact Us' button to schedule a free consultation. We'll discuss your needs, goals, and how we can help. From there, we'll create a custom plan and timeline for your project."
   },
   {
     question: "Do you work with international clients?",

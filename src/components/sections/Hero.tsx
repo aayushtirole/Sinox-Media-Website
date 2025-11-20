@@ -29,21 +29,10 @@ export default function Hero() {
             Strategy → Storytelling → High-quality content
           </p>
           
-          <div className="flex flex-col xl:flex-row gap-4 justify-center items-center pt-4">
+          <div className="flex justify-center items-center pt-4">
             <Button 
               size="lg" 
               className="px-8 py-6 text-lg rounded-full bg-primary hover:bg-primary-hover shadow-glow transition-smooth"
-              onClick={() => {
-                const contactSection = document.getElementById('contact');
-                contactSection?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              Book Your Call
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="px-8 py-6 text-lg rounded-full border-2 transition-smooth"
               onClick={() => {
                 const contactSection = document.getElementById('contact');
                 contactSection?.scrollIntoView({ behavior: 'smooth' });
