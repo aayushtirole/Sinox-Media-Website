@@ -94,29 +94,9 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* BRIDGE TEXT */}
-      <section className="py-12 xl:py-16 bg-secondary/30">
-        <div className="container mx-auto px-4 xl:px-8">
-          <div className="text-center max-w-3xl mx-auto">
-            <h3 className="text-2xl xl:text-3xl font-bold mb-3">
-              Content That Works Everywhere
-            </h3>
-            <p className="text-lg text-muted-foreground">
-              Short-form for reach. Long-form for depth, trust, and conversions.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* LONG-FORM PORTFOLIO */}
       <section id="longform" className="py-20 xl:py-32 bg-background">
         <div className="container mx-auto px-4 xl:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl xl:text-5xl font-bold mb-4">
-              Long-Form Videos & Podcasts
-            </h2>
-          </div>
-          
           {/* Simple 3-Video Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {longFormSamples.map((sample, index) => (
