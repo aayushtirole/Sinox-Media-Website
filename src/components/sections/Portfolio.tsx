@@ -1,6 +1,5 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Eye } from "lucide-react";
 import { useRef } from "react";
 
@@ -197,16 +196,10 @@ export default function Portfolio() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="text-center mb-8">
+        <div className="text-center">
           <p className="text-sm text-muted-foreground">
             ← Swipe to explore more reels →
           </p>
-        </div>
-        
-        <div className="text-center">
-          <Button variant="outline" className="px-8 py-6 rounded-xl border-2 border-foreground hover:bg-secondary transition-smooth">
-            View All Reels
-          </Button>
         </div>
       </div>
 
