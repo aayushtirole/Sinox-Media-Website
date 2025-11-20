@@ -4,7 +4,8 @@ const menuItems = [
   { label: "Home", href: "#home" },
   { label: "Process", href: "#process" },
   { label: "Portfolio", href: "#shortform" },
-  { label: "Pricing", href: "#pricing" }
+  { label: "Pricing", href: "#pricing" },
+  { label: "About", href: "#about" }
 ];
 
 export default function Navigation() {

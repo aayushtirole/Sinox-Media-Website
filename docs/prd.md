@@ -23,8 +23,7 @@ To present Sinox Media as a luxury content studio, attract potential clients, sh
 - Gradient Style: Soft noise-style background gradient edges
 
 ### 2.2 Visual Design Elements
-- Rounded Corners: 24–30px on cards
-- Shadow: Soft floating shadow effect
+- Rounded Corners: 24–30px on cards\n- Shadow: Soft floating shadow effect
 - Gradient Borders: Red → Orange → Pink → Purple on featured cards
 - Typography: Bold large headings with tight line spacing
 - Layout: Premium whitespace, perfect column alignment,36px–48px vertical gaps
@@ -65,13 +64,14 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe
 ### 3.4 Interactive States
 - **Menu hover**: Underline slide animation
 - **CTA hover**: Slight lift effect with enhanced shadow
-- **Sticky scroll**: Fixed position with12px top margin and slightly reduced padding
+- **Sticky scroll**: Fixed position with 12px top margin and slightly reduced padding
 
 ---
 \n## 4. Website Structure & Sections
 
 ### 4.1 Hero Section
-- Full-width soft gradient background\n- Top badge: '50+ Projects Managed Daily with Sinox Media'
+- Full-width soft gradient background
+- Top badge: '50+ Projects Managed Daily with Sinox Media'
 - Main headline: 'Content Production for Brands & Ventures.'
 - Subtext: 'Strategy → Storytelling → High-quality content'\n- Two CTA buttons:\n  - Primary Red Button: 'Book Your Call'
   - Outline Button: 'Contact Us'
@@ -110,7 +110,7 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe
 - **Type 1**: Brand Documentary card featuring professional portrait
   - Title: 'Brand Documentary'
   - Duration: '15:42'
-  - Reference image: Screenshot2025-11-19 031401.png
+  - Reference image: image.png
 - **Type 2**: Podcast Interview card featuring studio setup
   - Title: 'Podcast Interview'
   - Duration: '12:34'
@@ -123,7 +123,7 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe
   - 30s Reels with300K+ Views
   - 60s Shorts with 450K+ Views
   - 45s Reels with 520K+ Views
-  - Reference images: Screenshot 2025-11-21 005802.png, Screenshot 2025-11-21 005311.png
+  - Reference images: Screenshot2025-11-21 005802.png, Screenshot 2025-11-21 005311.png
 
 #### 4.2.5 Interactive States
 - **Hover Effect**: Card elevates with enhanced shadow (y-offset 16px, blur 40px)\n- **Hover Scale**: Smooth zoom effect (scale 1.03)
@@ -162,7 +162,8 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe
   - Revenue generated
 
 ### 4.7 Testimonials Section
-- Card-based layout\n- Past client quotes
+- Card-based layout
+- Past client quotes
 - Instagram icon on right side of each card
 - Soft pastel backgrounds with red-themed accents
 \n### 4.8 Social Proof / Screenshot Collage
@@ -182,25 +183,38 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe
 - Headline: 'The Journey Behind Sinox Media'
 - Premium whitespace
 - Stats row:
-  - 10,000+ Community\n  - 50+ Cohort\n  - 4,000+ Videos
+  - 10,000+ Community\n  - 50+ Cohort
+  - 4,000+ Videos
   - 98% Satisfaction
 
-### 4.11 Comparison Section
+### 4.11 About Section
+- Clean, centered layout with premium whitespace
+- Section headline: 'About Sinox Media'\n- Company introduction paragraph describing mission and values
+- Key highlights presented in a simple grid or list format:\n  - Company founding year and vision
+  - Core services and expertise
+  - Team composition and experience
+  - Industry recognition or achievements
+- Subtle background with minimal design elements
+- Optional: Team photo or studio workspace image
+- Consistent typography with rest of website
+- Red accent elements aligned with brand identity
+
+### 4.12 Comparison Section
 - Left card: 'Other Agencies' (gray background)
 - Right card: 'Sinox Media' (white + gradient frame)
 - Checkmarks and icon style comparison
 - 'VS' connector in middle
-\n### 4.12 Industry Insights Section
+\n### 4.13 Industry Insights Section
 - Top tabs: Content / Shootings / Ideations / Packaging / Distribution
 - Info card below tabs
 - CTA button: 'Start2-Week Paid Trial'
 - Bottom badges: Agile, Communication, Security, etc.
 
-### 4.13 FAQ Section
+### 4.14 FAQ Section
 - Double-column accordion layout
 - Clean minimal lines
 - White background\n- Consistent spacing
-\n### 4.14 Footer
+\n### 4.15 Footer
 - Full black background
 - Left: Sinox Media logo & tagline
 - Middle: Navigation links
@@ -234,8 +248,7 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe
 ## 6. Content Guidelines
 
 ### 6.1 Tone & Voice
-- Professional and premium
-- Confident and authoritative
+- Professional and premium\n- Confident and authoritative
 - Clear and concise
 - Client-focused
 \n### 6.2 Imagery
@@ -252,9 +265,9 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe
 - Premium BM Studios-inspired layout with Sinox Media red branding
 - Swipeable video cards collection with gradient borders and interactive hover effects
 - Comprehensive portfolio showcase with view metrics\n- Client testimonials and social proof
-- Detailed service explanations
-- Transparent pricing with regional toggle
+- Detailed service explanations\n- Transparent pricing with regional toggle
 - Founder story and company stats
+- Standard About section with company information
 - Competitive comparison section
 - Industry insights with categorized tabs
 - Comprehensive FAQ section
@@ -263,7 +276,8 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe
 ---
 \n## 8. Reference Images
 
-- Screenshot 2025-11-19 031401.png: Brand Documentary card design reference
-- image.png: Podcast Interview studio setup card\n- image-2.png: Product Deep Dive creator filming card
+- image.png: Brand Documentary card design reference
+- image.png: Podcast Interview studio setup card
+- image-2.png: Product Deep Dive creator filming card
 - Screenshot 2025-11-21 005802.png: Additional video card variations with view counts
 - Screenshot 2025-11-21 005311.png: Video card grid layout reference
