@@ -3,7 +3,6 @@ import Hero from "@/components/sections/Hero";
 import Portfolio from "@/components/sections/Portfolio";
 import VideoCarousel from "@/components/sections/VideoCarousel";
 import Services from "@/components/sections/Services";
-import WaveGoodbye from "@/components/sections/WaveGoodbye";
 import Pricing from "@/components/sections/Pricing";
 import Comparison from "@/components/sections/Comparison";
 import IndustryInsights from "@/components/sections/IndustryInsights";
@@ -23,7 +22,6 @@ export default function Index() {
       <div id="process">
         <Services />
       </div>
-      <WaveGoodbye />
       <div id="pricing">
         <Pricing />
       </div>
