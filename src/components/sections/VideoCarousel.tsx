@@ -117,9 +117,82 @@ export default function VideoCarousel() {
             {videoCards.map((video) => (
               <Card
                 key={video.id}
-                className="flex-shrink-0 w-[340px] xl:w-[400px] overflow-hidden group cursor-pointer hover:shadow-float transition-smooth snap-start"
+                className="flex-shrink-0 w-[340px] xl:w-[400px] overflow-hidden group cursor-pointer hover:shadow-float transition-smooth snap-start relative video-card-swipe"
                 style={{ borderRadius: '1.5rem' }}
               >
+                {/* Curved Corner Indicators */}
+                <div className="absolute top-0 left-0 w-16 h-16 pointer-events-none z-20">
+                  <svg viewBox="0 0 64 64" className="w-full h-full">
+                    <path
+                      d="M 0 0 L 0 32 Q 0 0 32 0 L 0 0"
+                      fill="none"
+                      stroke="url(#gradient-tl)"
+                      strokeWidth="3"
+                      className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    />
+                    <defs>
+                      <linearGradient id="gradient-tl" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#FF2E2E" />
+                        <stop offset="100%" stopColor="#FF8A00" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                
+                <div className="absolute top-0 right-0 w-16 h-16 pointer-events-none z-20">
+                  <svg viewBox="0 0 64 64" className="w-full h-full">
+                    <path
+                      d="M 64 0 L 32 0 Q 64 0 64 32 L 64 0"
+                      fill="none"
+                      stroke="url(#gradient-tr)"
+                      strokeWidth="3"
+                      className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    />
+                    <defs>
+                      <linearGradient id="gradient-tr" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#FF8A00" />
+                        <stop offset="100%" stopColor="#FF3E6C" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                
+                <div className="absolute bottom-0 left-0 w-16 h-16 pointer-events-none z-20">
+                  <svg viewBox="0 0 64 64" className="w-full h-full">
+                    <path
+                      d="M 0 64 L 0 32 Q 0 64 32 64 L 0 64"
+                      fill="none"
+                      stroke="url(#gradient-bl)"
+                      strokeWidth="3"
+                      className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    />
+                    <defs>
+                      <linearGradient id="gradient-bl" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="#FF2E2E" />
+                        <stop offset="100%" stopColor="#8C1EFF" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                
+                <div className="absolute bottom-0 right-0 w-16 h-16 pointer-events-none z-20">
+                  <svg viewBox="0 0 64 64" className="w-full h-full">
+                    <path
+                      d="M 64 64 L 32 64 Q 64 64 64 32 L 64 64"
+                      fill="none"
+                      stroke="url(#gradient-br)"
+                      strokeWidth="3"
+                      className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    />
+                    <defs>
+                      <linearGradient id="gradient-br" x1="100%" y1="100%" x2="0%" y2="0%">
+                        <stop offset="0%" stopColor="#FF3E6C" />
+                        <stop offset="100%" stopColor="#8C1EFF" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+
                 <div className="relative aspect-video overflow-hidden">
                   <img
                     src={video.thumbnail}
