@@ -1,6 +1,7 @@
 import Navigation from "@/components/sections/Navigation";
 import Hero from "@/components/sections/Hero";
 import Portfolio from "@/components/sections/Portfolio";
+import VideoCarousel from "@/components/sections/VideoCarousel";
 import Services from "@/components/sections/Services";
 import WaveGoodbye from "@/components/sections/WaveGoodbye";
 import Pricing from "@/components/sections/Pricing";
@@ -19,6 +20,7 @@ export default function Index() {
         <Hero />
       </div>
       <Portfolio />
+      <VideoCarousel />
       <div id="process">
         <Services />
       </div>
