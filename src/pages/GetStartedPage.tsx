@@ -23,6 +23,8 @@ import { ArrowLeft, CheckCircle2, Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { createTrialSignup } from "@/db/api";
+import type { TrialSignupInput } from "@/types/types";
 
 const formSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters"),
@@ -51,11 +53,22 @@ export default function GetStartedPage() {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Prepare data for database
+      const signupData: TrialSignupInput = {
+        full_name: values.fullName,
+        email: values.email,
+        phone: values.phone,
+        company: values.company || undefined,
+        service_interest: values.serviceInterest,
+        message: values.message || undefined,
+      };
 
-      // Log form data (in production, this would be sent to your backend)
-      console.log("Trial signup data:", values);
+      // Save to database
+      const result = await createTrialSignup(signupData);
+
+      if (!result) {
+        throw new Error("Failed to submit trial signup");
+      }
 
       toast({
         title: "Success! 🎉",
@@ -70,6 +83,7 @@ export default function GetStartedPage() {
         navigate("/");
       }, 2000);
     } catch (error) {
+      console.error("Trial signup error:", error);
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",

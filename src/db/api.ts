@@ -6,12 +6,14 @@ import type {
   FAQ,
   ContactSubmission,
   SiteStat,
+  TrialSignup,
   ContactFormData,
   PortfolioItemInput,
   TestimonialInput,
   PricingPlanInput,
   FAQInput,
-  SiteStatInput
+  SiteStatInput,
+  TrialSignupInput
 } from "@/types/types";
 
 // Portfolio Items
@@ -334,4 +336,70 @@ export async function createSiteStat(stat: SiteStatInput): Promise<SiteStat | nu
   }
 
   return data;
+}
+
+// Trial Signups
+export async function createTrialSignup(formData: TrialSignupInput): Promise<TrialSignup | null> {
+  const { data, error } = await supabase
+    .from("trial_signups")
+    .insert([{
+      full_name: formData.full_name,
+      email: formData.email,
+      phone: formData.phone,
+      company: formData.company || null,
+      service_interest: formData.service_interest,
+      message: formData.message || null,
+      status: 'pending'
+    }])
+    .select()
+    .maybeSingle();
+
+  if (error) {
+    console.error("Error creating trial signup:", error);
+    return null;
+  }
+
+  return data;
+}
+
+export async function getTrialSignups(): Promise<TrialSignup[]> {
+  const { data, error } = await supabase
+    .from("trial_signups")
+    .select("*")
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    console.error("Error fetching trial signups:", error);
+    return [];
+  }
+
+  return Array.isArray(data) ? data : [];
+}
+
+export async function updateTrialSignupStatus(id: string, status: string): Promise<boolean> {
+  const { error } = await supabase
+    .from("trial_signups")
+    .update({ status })
+    .eq("id", id);
+
+  if (error) {
+    console.error("Error updating trial signup status:", error);
+    return false;
+  }
+
+  return true;
+}
+
+export async function deleteTrialSignup(id: string): Promise<boolean> {
+  const { error } = await supabase
+    .from("trial_signups")
+    .delete()
+    .eq("id", id);
+
+  if (error) {
+    console.error("Error deleting trial signup:", error);
+    return false;
+  }
+
+  return true;
 }

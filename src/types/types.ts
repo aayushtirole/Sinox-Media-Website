@@ -71,6 +71,18 @@ export interface SiteStat {
   updated_at: string;
 }
 
+export interface TrialSignup {
+  id: string;
+  full_name: string;
+  email: string;
+  phone: string;
+  company: string | null;
+  service_interest: string;
+  message: string | null;
+  status: string;
+  created_at: string;
+}
+
 // Form types for creating/updating records
 export interface ContactFormData {
   name: string;
@@ -125,4 +137,13 @@ export interface SiteStatInput {
   stat_value: string;
   stat_label: string;
   display_order?: number;
+}
+
+export interface TrialSignupInput {
+  full_name: string;
+  email: string;
+  phone: string;
+  company?: string;
+  service_interest: string;
+  message?: string;
 }
