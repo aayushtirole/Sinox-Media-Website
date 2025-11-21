@@ -55,7 +55,8 @@ To present Sinox Media as a luxury content studio, attract potential clients, sh
 
 #### 2.3.5 Elastic Snap Animations
 - Accordions and dropdowns open with rubber-band stretch effect
-- Scroll bounce on section end\n- Tab switches feature elastic transitions
+- Scroll bounce on section end
+- Tab switches feature elastic transitions
 \n#### 2.3.6 Scroll-Triggered Magnetic Sections
 - New sections automatically snap and stick during scroll
 - Content aligns smoothly like Apple product pages
@@ -109,14 +110,16 @@ To present Sinox Media as a luxury content studio, attract potential clients, sh
 - **Applied to**: Portfolio images, featured project cards, About section images
 
 #### 2.3.14 General Animation Timing
-- All effects: 0.3s ease-in-out standard\n- Scroll animations: fade-on-scroll with momentum
+- All effects: 0.3s ease-in-out standard
+- Scroll animations: fade-on-scroll with momentum
 - Card zoom: scale1.03on hover
 - Button elevation: lift + glow on hover
 \n### 2.4 Overall Feel
 Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutting-edge 2025 animation aesthetics\n
 ---
 
-## 3. Navigation Bar\n
+## 3. Navigation Bar
+
 ### 3.1 Layout & Structure
 - Sticky top navigation bar with floating pill design
 - White rounded rectangular bar anchored to top with soft drop shadow
@@ -163,7 +166,8 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - **Card Shadow**: Soft floating shadow (y-offset 12px, blur 32px, opacity 0.10)
 - **Border Style**: 2–3px gradient border (Red → Orange → Pink → Purple) with neon pulse animation (0-25% glow cycle)
 - **Spacing**: 24–32px horizontal gap between cards
-\n#### 4.2.3 Card Content Elements
+
+#### 4.2.3 Card Content Elements
 - **Video Thumbnail**: Full-width background image covering entire card with liquid blob mask reveal effect
 - **Overlay Gradient**: Subtle dark gradient from bottom (opacity 0.6) to transparent top with fluid morph effect
 - **Title Label**: Positioned at bottom-left corner\n  - White bold text (18–22px font size)
@@ -192,12 +196,12 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - **Type 3**: Product Deep Dive card featuring creator with camera
   - Title: 'Product Deep Dive'
   - Duration: '18:20'
-  - Reference image: image-2.png (creator filming)
+  - Reference image: image.png (creator filming)
 - **Type 4**: Additional video cards with various content types
   - 30s Reels with300K+ Views
   - 60s Shorts with 450K+ Views
   - 45s Reels with 520K+ Views
-  - Reference images: Screenshot2025-11-21005802.png, Screenshot 2025-11-21 005311.png
+  - Reference images: Screenshot 2025-11-21 005802.png, Screenshot 2025-11-21 005311.png
 
 #### 4.2.5 Interactive States
 - **Hover Effect**: Card elevates with enhanced shadow (y-offset 16px, blur 40px) and 3D tilt with motion inertia
@@ -209,7 +213,7 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - **Transition**: All effects with 0.3s ease-in-out timing
 
 #### 4.2.6 Responsive Behavior
-- **Desktop**: Display3–4 cards visible at once with horizontal scroll and GSAP momentum
+- **Desktop**: Display 3–4 cards visible at once with horizontal scroll and GSAP momentum
 - **Tablet**: Display 2–3 cards visible with swipe gesture
 - **Mobile**: Display 1.2–1.5 cards visible with snap-to-card scroll behavior and elastic snap\n- **Navigation**: Optional left/right arrow buttons on desktop with magnetic hover for card navigation
 
@@ -222,7 +226,7 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Bold view count badges with neon glow
 - Soft gradient border on each card with pulse animation
 - Consistent grid spacing with scroll-triggered animations
-- Cards feature 3D tilt on hover with motion inertia
+- Cards feature3D tilt on hover with motion inertia
 - AI-style typographic animation for section headline
 - Liquid blob mask reveal effect on card images
 
@@ -238,7 +242,8 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Right: Faded gray text list with strikethrough fluid morph effect
 - Middle: Gradient-highlighted keyword with neon pulse
 - Premium whitespace with floating micro-particles
-- Stats row displaying with scroll-triggered magnetic alignment:\n  - Projects completed\n  - Total views
+- Stats row displaying with scroll-triggered magnetic alignment:\n  - Projects completed
+  - Total views
   - Years of experience
   - Revenue generated
 - Dynamic noise layer on background
@@ -254,8 +259,9 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 ### 4.8 Social Proof / Screenshot Collage
 - Large gradient-bordered card with animated neon pulse
 - Screenshots collage inside with fluid morph transitions
-- Smooth animation effects with3D tilt on hover
-- Hover activated spotlight effect\n- Floating micro-particles overlay
+- Smooth animation effects with 3D tilt on hover
+- Hover activated spotlight effect
+- Floating micro-particles overlay
 
 ### 4.9 Pricing Section
 - 3 pricing cards with identical size and spacing
@@ -264,7 +270,7 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Features list below price with elastic reveal on scroll
 - Primary red CTA button with magnetic hover and infrared glow
 - Hover: smooth elevation effect with 3D depth and neon pulse
-- Toggle switch:'For Indian / Outside India' with fluid morph transition
+- Toggle switch: 'For Indian / Outside India' with fluid morph transition
 - Cards feature perspective tilt on hover with motion inertia
 - Scroll-triggered magnetic section alignment
 
@@ -273,17 +279,20 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Right: Image with gradient frame, neon pulse border, and liquid blob mask reveal effect
 - Headline: 'The Journey Behind Sinox Media' with scanner reveal effect
 - Premium whitespace with floating micro-particles\n- Stats row with scroll-triggered animations:
-  - 10,000+ Community\n  - 50+ Cohort\n  - 4,000+ Videos
+  - 10,000+ Community\n  - 50+ Cohort
+  - 4,000+ Videos
   - 98% Satisfaction\n- 3D depth parallax on image\n- Dynamic noise layer on background
 
-### 4.11 About Section\n- Clean, centered layout with premium whitespace
+### 4.11 About Section
+- Clean, centered layout with premium whitespace
 - Section headline: 'About Sinox Media' with AI-style scanner animation
-- Company introduction paragraph with fade-in reveal\n- Key highlights presented in grid format with elastic snap animations:\n  - Company founding year and vision
+- Company introduction paragraph with fade-in reveal\n- Key highlights presented in grid format with elastic snap animations:
+  - Company founding year and vision
   - Core services and expertise
   - Team composition and experience
   - Industry recognition or achievements
 - Subtle background with dynamic noise layer
-- Optional: Team photo or studio workspace image with3D tilt on hover and liquid blob mask reveal
+- Optional: Team photo or studio workspace image with 3D tilt on hover and liquid blob mask reveal
 - Consistent typography with rest of website
 - Red accent elements with neon pulse effect
 - Hover activated spotlight on key highlights
@@ -291,7 +300,8 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 ### 4.12 Comparison Section
 - Left card: 'Other Agencies' (gray background) with subtle animations
 - Right card: 'Sinox Media' (white + gradient frame with neon pulse)
-- Checkmarks and icon style comparison with elastic reveal\n- 'VS' connector in middle with magnetic hover effect
+- Checkmarks and icon style comparison with elastic reveal
+- 'VS' connector in middle with magnetic hover effect
 - Cards feature smooth perspective flip on hover
 - 3D depth and motion inertia on interaction
 - Scroll-triggered magnetic alignment
@@ -327,7 +337,8 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Fully responsive across desktop, tablet, and mobile devices
 - Maintain premium spacing and visual hierarchy on all screen sizes
 - Adaptive animation complexity based on device performance
-\n### 5.2 Performance\n- Smooth animations without lag (60fps target)
+
+### 5.2 Performance\n- Smooth animations without lag (60fps target)
 - Optimized image loading with lazy loading
 - Fast page transitions with cinematic sweep effects
 - Lazy loading for video card thumbnails
@@ -361,6 +372,30 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - RequestAnimationFrame for smooth 60fps rendering
 - SVG filters and masks for liquid blob reveal effect
 - Vanilla JavaScript for blob mask cursor tracking and touch handling
+\n### 5.5 Database & Data Storage
+- **Database System**: Relational database (MySQL/PostgreSQL) or NoSQL (MongoDB) based on data structure requirements
+- **Data Storage Requirements**:
+  - **Portfolio Content**: Store video metadata (title, duration, thumbnail path, view counts, category tags)
+  - **Client Testimonials**: Store testimonial text, client name, company info, social media links, metrics data
+  - **Pricing Plans**: Store plan details, features list, pricing by region (India/Outside India)
+  - **Contact Form Submissions**: Store inquiry data (name, email, message, timestamp, status)
+  - **Analytics Data**: Track page views, user interactions, video engagement metrics
+  - **User Sessions**: Store booking requests, trial sign-ups, consultation schedules
+  - **FAQ Content**: Store questions, answers, category tags for easy management
+  - **Company Stats**: Store and update metrics (projects completed, views, community size, satisfaction rate)
+- **Data Management Features**:
+  - CRUD operations for all content sections
+  - Admin dashboard for content updates
+  - Automated backup system
+  - Data validation and sanitization
+  - Secure API endpoints for data retrieval
+  - Caching layer for frequently accessed data
+- **Security Measures**:
+  - Encrypted data transmission (HTTPS/SSL)
+  - SQL injection prevention
+  - Input validation and sanitization
+  - Regular security audits
+  - Secure authentication for admin access
 \n---
 
 ## 6. Content Guidelines
@@ -387,12 +422,14 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Swipeable video cards collection with gradient borders, neon pulse,3D tilt, magnetic hover effects, and liquid blob mask reveal
 - Comprehensive portfolio showcase with view metrics and advanced animations
 - Client testimonials with smooth perspective flip cards and social proof
-- Detailed service explanations with hover activated spotlight\n- Transparent pricing with regional toggle and elastic animations
+- Detailed service explanations with hover activated spotlight
+- Transparent pricing with regional toggle and elastic animations
 - Founder story and company stats with AI-style reveals
 - Standard About section with company information and floating particles
 - Competitive comparison section with perspective flip cards
 - Industry insights with categorized tabs and fluid morph transitions
 - Comprehensive FAQ section with elastic snap accordions\n- Professional footer with social links and dynamic noise layer
+- Database-driven content management system for all dynamic sections
 - Cutting-edge 2025 animation system including:\n  - Magnetic hover effects throughout
   - Fluid morph transitions
   - 3D depth and layered parallax
@@ -412,6 +449,7 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 ## 8. Reference Images
 
 - image.png: Brand Documentary card design reference
-- image.png: Podcast Interview studio setup card\n- image-2.png: Product Deep Dive creator filming card
-- Screenshot2025-11-21 005802.png: Additional video card variations with view counts
+- image.png: Podcast Interview studio setup card
+- image.png: Product Deep Dive creator filming card
+- Screenshot 2025-11-21 005802.png: Additional video card variations with view counts
 - Screenshot 2025-11-21 005311.png: Video card grid layout reference

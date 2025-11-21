@@ -1,38 +1,24 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Eye } from "lucide-react";
-import { useRef } from "react";
-
-const shortFormItems = [
-  {
-    image: "https://miaoda-site-img.s3cdn.medo.dev/images/70eff5cb-49bc-4192-81cb-5e7fd9e2e7e0.jpg",
-    views: "300K+",
-    type: "30s Reels"
-  },
-  {
-    image: "https://miaoda-site-img.s3cdn.medo.dev/images/fa3f4d5a-62c8-49ca-a969-bc87f9a88ec3.jpg",
-    views: "450K+",
-    type: "60s Shorts"
-  },
-  {
-    image: "https://miaoda-site-img.s3cdn.medo.dev/images/39eec0a7-4401-4bd1-85bc-f241994eb8ca.jpg",
-    views: "520K+",
-    type: "45s Reels"
-  },
-  {
-    image: "https://miaoda-site-img.s3cdn.medo.dev/images/4e54de14-9800-42ac-8f1a-f7e6b40f481c.jpg",
-    views: "380K+",
-    type: "30s Reels"
-  },
-  {
-    image: "https://miaoda-site-img.s3cdn.medo.dev/images/aeb943e8-48d2-4c23-bf29-5e2acb36d745.jpg",
-    views: "410K+",
-    type: "60s Shorts"
-  }
-];
+import { useRef, useEffect, useState } from "react";
+import { getPortfolioItems } from "@/db/api";
+import type { PortfolioItem } from "@/types/types";
 
 export default function Portfolio() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [portfolioItems, setPortfolioItems] = useState<PortfolioItem[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function loadPortfolioItems() {
+      setLoading(true);
+      const items = await getPortfolioItems();
+      setPortfolioItems(items);
+      setLoading(false);
+    }
+    loadPortfolioItems();
+  }, []);
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
@@ -93,7 +79,16 @@ export default function Portfolio() {
               WebkitOverflowScrolling: 'touch'
             }}
           >
-            {shortFormItems.map((item, index) => (
+            {loading ? (
+              <div className="flex items-center justify-center w-full py-20">
+                <p className="text-muted-foreground">Loading portfolio...</p>
+              </div>
+            ) : portfolioItems.length === 0 ? (
+              <div className="flex items-center justify-center w-full py-20">
+                <p className="text-muted-foreground">No portfolio items available</p>
+              </div>
+            ) : (
+              portfolioItems.map((item, index) => (
               <Card 
                 key={index}
                 className="flex-shrink-0 w-[300px] xl:w-[360px] gradient-border overflow-hidden group cursor-pointer relative snap-start"
@@ -174,8 +169,8 @@ export default function Portfolio() {
 
                 <div className="relative aspect-[9/16] overflow-hidden">
                   <img 
-                    src={item.image}
-                    alt={`Short-form content ${index + 1}`}
+                    src={item.image_url}
+                    alt={item.title || `Short-form content ${index + 1}`}
                     className="w-full h-full object-cover transition-smooth group-hover:scale-110"
                   />
                   <div className="absolute bottom-4 left-4">
@@ -191,7 +186,7 @@ export default function Portfolio() {
                   </div>
                 </div>
               </Card>
-            ))}
+            )))}
           </div>
         </div>
 
