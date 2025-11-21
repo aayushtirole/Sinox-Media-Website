@@ -3,6 +3,7 @@ import AdminPage from './pages/AdminPage';
 import StarterPage from './pages/StarterPage';
 import ProfessionalPage from './pages/ProfessionalPage';
 import EnterprisePage from './pages/EnterprisePage';
+import GetStartedPage from './pages/GetStartedPage';
 import type { ReactNode } from 'react';
 
 interface RouteConfig {
@@ -17,6 +18,12 @@ const routes: RouteConfig[] = [
     name: 'Home',
     path: '/',
     element: <Index />
+  },
+  {
+    name: 'Get Started',
+    path: '/get-started',
+    element: <GetStartedPage />,
+    visible: false
   },
   {
     name: 'Starter Plan',

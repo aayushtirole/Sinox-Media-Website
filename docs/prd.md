@@ -55,7 +55,8 @@ To present Sinox Media as a luxury content studio, attract potential clients, sh
 
 #### 2.3.5 Elastic Snap Animations
 - Accordions and dropdowns open with rubber-band stretch effect
-- Scroll bounce on section end\n- Tab switches feature elastic transitions
+- Scroll bounce on section end
+- Tab switches feature elastic transitions
 \n#### 2.3.6 Scroll-Triggered Magnetic Sections
 - New sections automatically snap and stick during scroll
 - Content aligns smoothly like Apple product pages
@@ -116,7 +117,8 @@ To present Sinox Media as a luxury content studio, attract potential clients, sh
 Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutting-edge 2025 animation aesthetics\n
 ---
 
-## 3. Navigation Bar\n
+## 3. Navigation Bar
+
 ### 3.1 Layout & Structure
 - Sticky top navigation bar with floating pill design
 - White rounded rectangular bar anchored to top with soft drop shadow
@@ -222,7 +224,7 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Bold view count badges with neon glow
 - Soft gradient border on each card with pulse animation
 - Consistent grid spacing with scroll-triggered animations
-- Cards feature 3D tilt on hover with motion inertia
+- Cards feature3D tilt on hover with motion inertia
 - AI-style typographic animation for section headline
 - Liquid blob mask reveal effect on card images
 
@@ -275,8 +277,7 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Left: Text content with AI-style typographic animations
 - Right: Image with gradient frame, neon pulse border, and liquid blob mask reveal effect
 - Headline: 'The Journey Behind Sinox Media' with scanner reveal effect
-- Premium whitespace with floating micro-particles\n- Stats row with scroll-triggered animations:\n  - 10,000+ Community\n  - 50+ Cohort
-  - 4,000+ Videos
+- Premium whitespace with floating micro-particles\n- Stats row with scroll-triggered animations:\n  - 10,000+ Community\n  - 50+ Cohort\n  - 4,000+ Videos
   - 98% Satisfaction\n- 3D depth parallax on image\n- Dynamic noise layer on background
 
 ### 4.11 About Section
@@ -304,7 +305,8 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Top tabs: Content / Shootings / Ideations / Packaging / Distribution with magnetic hover
 - Tab switching with elastic snap and fluid morph transitions
 - Info card below tabs with 3D tilt on hover
-- CTA button: 'Start2-Week Paid Trial' with infrared glow and magnetic effect
+- CTA button: 'Start1-Week Paid Trial' with infrared glow and magnetic effect
+- **CTA Button Routing**:'Start 1-Week Paid Trial' button redirects to /trial/start
 - Bottom badges: Agile, Communication, Security, etc. with neon pulse
 - AI-style typographic animations for headlines
 - Floating micro-particles in background
@@ -321,17 +323,16 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Left: Sinox Media logo & tagline with subtle floating animation
 - Middle: Navigation links with magnetic hover and underline slide\n- Right: Social media icons with neon pulse on hover
 - Bottom: Legal information & status indicator\n- Floating micro-particles overlay
-- Smooth page transition sweep when navigating
-
+- Smooth page transition sweep when navigating\n
 ---
 
-## 5. Get Started Pages (New)
+## 5. Get Started Pages
 
 ### 5.1 Page Structure Overview
 - Three dedicated onboarding pages corresponding to pricing tiers
-- URL Routes:
-  - /get-started/starter
-  - /get-started/professional\n  - /get-started/enterprise
+- URL Routes:\n  - /get-started/starter
+  - /get-started/professional
+  - /get-started/enterprise
 - Consistent design language with main website
 - Premium animation effects throughout
 \n### 5.2 Common Page Elements
@@ -357,7 +358,8 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Input validation with real-time feedback
 - Step transitions with fluid morph effects
 \n### 5.3 Form Steps
-\n#### Step 1: Contact Information
+
+#### Step 1: Contact Information
 - Full name (required)
 - Email address (required)
 - Phone number (optional)
@@ -448,7 +450,8 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Section padding: 48px
 - Card border-radius: 24px
 - Button padding: 16px 32px
-\n### 5.8 Responsive Behavior
+
+### 5.8 Responsive Behavior
 
 #### 5.8.1 Desktop (1200px+)
 - Two-column layout with sticky summary card
@@ -466,14 +469,218 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 
 ---
 
-## 6. Technical Requirements
+## 6. Trial Onboarding Page (New)
 
-### 6.1 Responsive Design
+### 6.1 Page Overview
+- Dedicated onboarding page for 1-week paid trial sign-ups
+- URL Route: /trial/start
+- Accessed via 'Start 1-Week Paid Trial' button in Industry Insights section
+- Design language consistent with get-started pages
+- Premium animation effects throughout
+
+### 6.2 Page Structure
+
+#### 6.2.1 Header Section
+- Simplified navigation bar (logo + back to home link)
+- Trial badge: '1-Week Paid Trial' with neon pulse effect
+- Headline: 'Start Your 1-Week Trial' with AI-style scanner reveal
+- Subtext: 'Experience premium content production with full access to our services'
+
+#### 6.2.2 Page Layout
+- Two-column layout (desktop) / single column (mobile)
+- Left column: Trial summary card with gradient border and neon pulse
+- Right column: Multi-step trial form with elastic transitions
+\n### 6.3 Trial Summary Card
+\n#### 6.3.1 Card Content
+- Trial icon with floating animation
+- Trial duration: '1 Week Full Access'
+- Trial pricing display with strikethrough regular price
+- Key trial benefits list:\n  - Full access to all services
+  - Dedicated project manager
+  - 2video deliverables
+  - Strategy consultation
+  - No long-term commitment
+- Sticky positioning on scroll (desktop)
+- 3D depth effect on hover\n- Gradient border with neon pulse animation
+
+#### 6.3.2 Visual Design
+- White background with soft shadow
+- Border-radius: 24px
+- Red accent elements (#FF2E2E)\n- Checkmark icons with magnetic hover
+- Floating micro-particles overlay
+\n### 6.4 Trial Form Steps
+
+#### Step 1: Contact Information
+- Full name (required)
+- Email address (required)
+- Phone number (required)
+- Company name (optional)
+- Industry selection (dropdown with magnetic hover)
+\n#### Step 2: Trial Preferences
+- Content type interest (multi-select checkboxes):\n  - Brand Documentary
+  - Product Videos
+  - Social Media Content
+  - Podcast Production
+  - Other (text input)
+- Preferred start date (calendar widget)
+- Project urgency (radio buttons: Immediate / Within 1 week / Flexible)
+\n#### Step 3: Project Brief
+- Project description (textarea, required)
+- Target audience (text input)\n- Key message/goals (textarea)
+- Reference materials upload (optional, drag-and-drop zone)
+\n#### Step 4: Payment Setup
+- Trial payment amount display
+- Payment method selection (credit card / PayPal)\n- Billing information form
+- Promo code field (optional)
+- Terms and conditions checkbox (required)
+- Money-back guarantee notice
+
+#### Step 5: Confirmation
+- Trial summary with all details
+- Start date confirmation
+- Payment summary
+- Final CTA: 'Start My Trial' button with infrared glow and magnetic effect
+- Alternative: 'Schedule Call First' link
+
+### 6.5 Form Features
+
+#### 6.5.1 Progress Indicator
+- 5-step progress bar with gradient fill
+- Step numbers with magnetic hover
+- Current step highlighted with neon pulse
+- Completion percentage display
+- Smooth transitions between steps with fluid morph\n
+#### 6.5.2 Form Animations
+- Field focus: Magnetic label lift with neon underline\n- Input typing: Smooth character reveal
+- Validation: Elastic shake on error, smooth checkmark on success
+- Step navigation: Cinematic sweep transitions
+- File upload: Drag-and-drop with hover effects
+
+#### 6.5.3 Interactive Elements
+- Back/Next buttons with magnetic hover
+- Save progress option (local storage)
+- Real-time validation with helpful error messages
+- Tooltips with additional information
+- Calendar widget with smooth date selection
+- Dropdown menus with elastic animations
+
+### 6.6 Success State
+
+#### 6.6.1 Confirmation Screen
+- Full-screen success animation with cinematic sweep
+- Large checkmark icon with neon pulse effect
+- Personalized welcome message with user name
+- Trial start date and duration display
+- What happens next timeline:\n  - Immediate: Confirmation email sent
+  - Within 24 hours: Project manager assignment
+  - Day 1: Kickoff call scheduled
+  - Week 1: First deliverable\n  - Week 1end: Second deliverable + review
+\n#### 6.6.2 Next Steps Section
+- CTA buttons with magnetic hover:\n  - 'Access Trial Dashboard' (primary red button)
+  - 'Download Welcome Guide' (outline button)
+  - 'Schedule Kickoff Call' (outline button)
+- Contact information for trial support
+- Social media links with neon pulse
+\n#### 6.6.3 Automated Communications
+- Confirmation email with trial details
+- Calendar invite for kickoff call
+- Welcome package with:\n  - Trial guide PDF
+  - Brand questionnaire
+  - Content brief template
+  - Contact information
+- SMS confirmation (if phone provided)
+
+### 6.7 Design Specifications
+
+#### 6.7.1 Color Scheme
+- Primary: Red (#FF2E2E)
+- Accent: Light red (#FF6B6B) for trial-specific elements
+- Background: White (#FFFFFF) with soft gray sections (#FAFAFA)
+- Text: Jet black (#0A0A0A)\n- Gradient accents: Orange → Pink → Purple
+
+#### 6.7.2 Typography\n- Page headline: 48px bold with AI-style scanner reveal
+- Section headings: 32px bold\n- Form labels: 14px medium weight
+- Input text: 16px regular\n- Helper text: 12px gray
+- Error messages: 12px red
+
+#### 6.7.3 Spacing & Layout
+- Form field vertical spacing: 24px
+- Section padding: 48px (desktop) / 24px (mobile)
+- Card border-radius: 24px
+- Button padding: 16px 32px
+- Input field padding: 12px 16px
+
+#### 6.7.4 Animation Specifications
+- All transitions: 0.3s ease-in-out
+- Magnetic hover: 8px attraction radius
+- Neon pulse: 2s cycle, 0-25% glow\n- Page transitions: 0.5s cinematic sweep
+- Form step transitions: 0.4s fluid morph
+- Particle movement: 3-5s random paths
+
+### 6.8 Responsive Behavior
+
+#### 6.8.1 Desktop (1200px+)
+- Two-column layout with sticky summary card
+- Full animation effects enabled
+- Magnetic hover interactions active
+- Floating particles visible
+- Live cursor trail enabled
+
+#### 6.8.2 Tablet (768px - 1199px)
+- Single column layout
+- Summary card at top (non-sticky)\n- Simplified animations
+- Reduced particle density
+- Touch-optimized interactions
+
+#### 6.8.3 Mobile (< 768px)
+- Vertical stack layout
+- Collapsible summary card
+- Touch-optimized form fields
+- Simplified particle effects
+- Larger touch targets (48px minimum)
+- Simplified magnetic effects
+
+### 6.9 Technical Requirements
+
+#### 6.9.1 Form Handling
+- Client-side validation with real-time feedback
+- Server-side validation for security
+- AJAX form submission without page reload
+- Progress saving to local storage
+- Session timeout handling (30 minutes)
+- Form data encryption during transmission
+
+#### 6.9.2 Payment Integration
+- Secure payment gateway (Stripe/PayPal)
+- PCI compliance for card processing
+- Trial pricing calculation with promo codes
+- Payment confirmation handling
+- Refund processing capability
+- Invoice generation\n
+#### 6.9.3 Database Storage
+- Trial sign-up data storage
+- User profile creation
+- Project brief storage
+- Payment transaction records\n- File upload storage (cloud-based)
+- Activity tracking and analytics
+
+#### 6.9.4 Email Automation
+- Confirmation email template
+- Welcome email sequence
+- Reminder emails (kickoff call, deliverables)
+- Trial end notification
+- Conversion follow-up emails
+
+---
+
+## 7. Technical Requirements
+
+### 7.1 Responsive Design
 - Fully responsive across desktop, tablet, and mobile devices
 - Maintain premium spacing and visual hierarchy on all screen sizes
 - Adaptive animation complexity based on device performance
 
-### 6.2 Performance\n- Smooth animations without lag (60fps target)
+### 7.2 Performance\n- Smooth animations without lag (60fps target)
 - Optimized image loading with lazy loading
 - Fast page transitions with cinematic sweep effects
 - Lazy loading for video card thumbnails
@@ -482,7 +689,7 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Dynamic noise layer optimized for performance
 - Liquid blob mask effect optimized with requestAnimationFrame
 
-### 6.3 Interactive Elements
+### 7.3 Interactive Elements
 - Magnetic hover effects on all buttons and cards
 - Smooth scroll behavior with GSAP momentum and inertia
 - Horizontal swipe/drag functionality for video cards
@@ -504,14 +711,14 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Multi-step form navigation with fluid transitions
 - Real-time form validation with elastic animations
 - Calendar widget with smooth date selection
-\n### 6.4 Animation Libraries & Technologies
+\n### 7.4 Animation Libraries & Technologies
 - GSAP (GreenSock Animation Platform) for scroll momentum and complex animations
-- CSS3transforms and transitions for performance\n- WebGL for particle systems and advanced effects
+- CSS3 transforms and transitions for performance\n- WebGL for particle systems and advanced effects
 - Intersection Observer API for scroll-triggered animations
 - RequestAnimationFrame for smooth 60fps rendering
 - SVG filters and masks for liquid blob reveal effect
 - Vanilla JavaScript for blob mask cursor tracking and touch handling
-\n### 6.5 Database & Data Storage
+\n### 7.5 Database & Data Storage
 - **Database System**: Relational database (MySQL/PostgreSQL) or NoSQL (MongoDB) based on data structure requirements
 - **Data Storage Requirements**:
   - **Portfolio Content**: Store video metadata (title, duration, thumbnail path, view counts, category tags)
@@ -523,7 +730,9 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
   - **FAQ Content**: Store questions, answers, category tags for easy management
   - **Company Stats**: Store and update metrics (projects completed, views, community size, satisfaction rate)
   - **Onboarding Data**: Store get-started form submissions (contact info, project details, consultation schedules, payment info)
-  - **User Accounts**: Store user profiles for Professional/Enterprise clients (login credentials, plan details, project history)
+  - **Trial Data**: Store trial sign-ups (contact info, project brief, preferences, payment info, trial status)
+  - **User Accounts**: Store user profiles for Professional/Enterprise clients and trial users (login credentials, plan details, project history)
+  - **File Uploads**: Store reference materials and project files (cloud storage integration)
 - **Data Management Features**:
   - CRUD operations for all content sections
   - Admin dashboard for content updates
@@ -533,19 +742,21 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
   - Caching layer for frequently accessed data
   - Form submission handling with email notifications
   - Calendar integration for consultation scheduling
+  - Payment transaction logging
+  - Trial status tracking and management
 - **Security Measures**:
   - Encrypted data transmission (HTTPS/SSL)
   - SQL injection prevention
   - Input validation and sanitization
   - Regular security audits\n  - Secure authentication for admin access
   - PCI compliance for payment processing
-\n### 6.6 Routing & Navigation
+  - GDPR compliance for user data\n\n### 7.6 Routing & Navigation
 - Client-side routing for smooth page transitions
-- URL structure:\n  - Main pages: /, /process, /portfolio, /pricing, /about
-  - Get Started pages: /get-started/starter, /get-started/professional, /get-started/enterprise
+- URL structure:\n  - Main pages: /, /process, /portfolio, /pricing, /about\n  - Get Started pages: /get-started/starter, /get-started/professional, /get-started/enterprise
+  - Trial page: /trial/start
 - Browser history management
 - Deep linking support\n- 404 error page with navigation back to home
-\n### 6.7 Form Handling
+\n### 7.7 Form Handling
 - Client-side validation with real-time feedback
 - Server-side validation for security
 - AJAX form submission without page reload
@@ -553,18 +764,19 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Email confirmation system
 - Calendar API integration for scheduling
 - Payment gateway integration (Stripe/PayPal)
+- File upload handling with drag-and-drop
+- Promo code validation system
+\n---
 
----
+## 8. Content Guidelines
 
-## 7. Content Guidelines
-
-### 7.1 Tone & Voice
+### 8.1 Tone & Voice
 - Professional and premium\n- Confident and authoritative
 - Clear and concise
 - Client-focused
 - Modern and innovative
 
-### 7.2 Imagery
+### 8.2 Imagery
 - High-quality portfolio reels and screenshots
 - Professional client testimonial videos
 - Clean product/service visuals
@@ -574,15 +786,14 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 
 ---
 
-## 8. Key Features Summary
+## 9. Key Features Summary
 
 - BM Studios-inspired sticky navigation bar with Sinox Media red branding and magnetic hover effects
 - Premium BM Studios-inspired layout with Sinox Media red branding and 2025 ultra-modern animations
 - Swipeable video cards collection with gradient borders, neon pulse,3D tilt, magnetic hover effects, and liquid blob mask reveal
 - Comprehensive portfolio showcase with view metrics and advanced animations
 - Client testimonials with smooth perspective flip cards and social proof
-- Detailed service explanations with hover activated spotlight
-- Transparent pricing with regional toggle and elastic animations
+- Detailed service explanations with hover activated spotlight\n- Transparent pricing with regional toggle and elastic animations
 - Founder story and company stats with AI-style reveals
 - Standard About section with company information and floating particles
 - Competitive comparison section with perspective flip cards
@@ -590,9 +801,10 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Comprehensive FAQ section with elastic snap accordions
 - Professional footer with social links and dynamic noise layer
 - **Three dedicated Get Started pages with plan-specific onboarding flows**
+- **Dedicated 1-Week Paid Trial onboarding page with complete sign-up flow**
 - **Multi-step form system with real-time validation and smooth transitions**
 - **Calendar integration for consultation scheduling**
-- **Payment processing for Professional and Enterprise plans**
+- **Payment processing for Professional, Enterprise plans, and trial sign-ups**
 - Database-driven content management system for all dynamic sections
 - Cutting-edge 2025 animation system including:\n  - Magnetic hover effects throughout
   - Fluid morph transitions
@@ -604,15 +816,15 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
   - Dynamic noise layer on gradients
   - Smooth perspective flip cards
   - Floating micro-particles system
-  - Hover activated spotlight
-  - Page transition cinematic sweep\n  - Live cursor trail (minimal)
+  - Hover activated spotlight\n  - Page transition cinematic sweep\n  - Live cursor trail (minimal)
   - Interactive liquid blob mask reveal effect with organic animation and touch support
 \n---
 
-## 9. Reference Images
+## 10. Reference Images
 
 - image.png: Brand Documentary card design reference
 - image.png: Podcast Interview studio setup card
 - image.png: Product Deep Dive creator filming card
 - Screenshot2025-11-21 005802.png: Additional video card variations with view counts
 - Screenshot 2025-11-21 005311.png: Video card grid layout reference
+- Screenshot 2025-11-22 015929.png: Additional reference image
