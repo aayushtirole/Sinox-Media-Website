@@ -49,6 +49,7 @@ function MyComponent() {
 | `wobbleSpeed` | `number` | `0.8` | Animation speed multiplier (0.4-1.6) |
 | `inertia` | `number` | `0.12` | Cursor follow smoothness (0-1, lower = heavier) |
 | `hoverThreshold` | `number` | `100` | Distance in pixels to activate effect |
+| `imageStyle` | `React.CSSProperties` | `undefined` | Custom inline styles for image elements |
 
 ## Adjusting Variables
 
@@ -136,6 +137,62 @@ Distance in pixels from the image edge where the effect activates.
 ```
 
 **Recommended range**: 50-300px
+
+## Image Fit Options
+
+### Using `object-contain` (Recommended for detailed images)
+
+Prevents cropping and shows the entire image within the container:
+
+```tsx
+<Card className="bg-white p-4">
+  <LiquidBlobReveal
+    imageUrl="your-image.jpg"
+    imageStyle={{ objectFit: 'contain' }}
+  />
+</Card>
+```
+
+**Best for:**
+- Images with important details at edges
+- Office/workspace photos with visible elements
+- Product photography
+- Images where full context matters
+
+### Using `object-cover` (Default)
+
+Fills the entire container, may crop edges:
+
+```tsx
+<LiquidBlobReveal
+  imageUrl="your-image.jpg"
+  imageStyle={{ objectFit: 'cover' }}
+/>
+```
+
+**Best for:**
+- Portrait/headshot photos
+- Abstract backgrounds
+- Images designed for cropping
+- When you want full container coverage
+
+### Preventing Border Gaps
+
+When using `object-contain`, add padding and background to the Card wrapper:
+
+```tsx
+<Card className="gradient-border bg-white p-4">
+  <LiquidBlobReveal
+    imageUrl="your-image.jpg"
+    imageStyle={{ objectFit: 'contain' }}
+  />
+</Card>
+```
+
+This ensures:
+- No gaps between image and gradient border
+- Clean, professional appearance
+- Image fully visible without cropping
 
 ## Preset Configurations
 
@@ -264,19 +321,26 @@ Distance in pixels from the image edge where the effect activates.
 In the Sinox Media website, the About section uses:
 
 ```tsx
-<LiquidBlobReveal
-  imageUrl="https://miaoda-conversation-file.s3cdn.medo.dev/..."
-  alt="The Journey Behind Sinox Media - Office workspace"
-  className="aspect-[4/5]"
-  blobSize={250}
-  blurAmount={45}
-  wobbleSpeed={0.8}
-  inertia={0.12}
-  hoverThreshold={100}
-/>
+<Card className="gradient-border overflow-hidden bg-white p-4">
+  <LiquidBlobReveal
+    imageUrl="https://miaoda-conversation-file.s3cdn.medo.dev/..."
+    alt="The Journey Behind Sinox Media - Office workspace"
+    className="aspect-[4/5]"
+    blobSize={250}
+    blurAmount={45}
+    wobbleSpeed={0.8}
+    inertia={0.12}
+    hoverThreshold={100}
+    imageStyle={{ objectFit: 'contain' }}
+  />
+</Card>
 ```
 
-This creates a smooth, professional reveal effect that matches the premium brand aesthetic.
+This creates a smooth, professional reveal effect that:
+- Shows the full office workspace image without cropping
+- Maintains the premium gradient border
+- Provides proper padding to prevent border gaps
+- Matches the premium brand aesthetic
 
 ## Technical Details
 
