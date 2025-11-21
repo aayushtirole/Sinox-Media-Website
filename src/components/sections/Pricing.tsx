@@ -114,7 +114,7 @@ const pricingPlans = {
 };
 
 export default function Pricing() {
-  const [region, setRegion] = useState<"india" | "international">("international");
+  const [region, setRegion] = useState<"india" | "international">("india");
   const plans = pricingPlans[region];
 
   return (
