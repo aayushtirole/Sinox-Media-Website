@@ -1,5 +1,4 @@
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { X, Check, Zap } from "lucide-react";
 
 const comparisonPoints = [
@@ -19,9 +18,7 @@ export default function Comparison() {
       <div className="container mx-auto px-4 xl:px-8 relative z-10">
         {/* Header with Subtle Gradient Behind Text */}
         <div className="text-center mb-20 relative">
-          <Badge variant="secondary" className="mb-6 px-4 py-2 text-sm font-semibold">
-            Comparison
-          </Badge>
+          {/* Removed Badge - keeping only heading and description */}
           
           {/* Subtle radial gradient behind heading only */}
           <div className="relative inline-block">
