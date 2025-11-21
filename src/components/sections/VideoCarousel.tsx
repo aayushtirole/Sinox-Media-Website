@@ -117,7 +117,7 @@ export default function VideoCarousel() {
             {videoCards.map((video) => (
               <Card
                 key={video.id}
-                className="flex-shrink-0 w-[340px] xl:w-[400px] overflow-hidden group cursor-pointer hover:shadow-float transition-all duration-300 snap-start relative video-card-swipe p-0 border-2 border-border/40 hover:border-border/60"
+                className="flex-shrink-0 w-[340px] xl:w-[400px] gradient-border overflow-hidden group cursor-pointer hover:shadow-float transition-all duration-300 snap-start relative video-card-swipe p-0"
                 style={{ borderRadius: '1.5rem' }}
               >
                 {/* Curved Corner Indicators */}
