@@ -54,7 +54,7 @@ export default function About() {
           </div>
           
           <Card 
-            className="gradient-border overflow-hidden"
+            className="gradient-border overflow-hidden bg-white p-4"
             style={{ borderRadius: '1.75rem' }}
           >
             <LiquidBlobReveal
@@ -66,6 +66,7 @@ export default function About() {
               wobbleSpeed={0.8}
               inertia={0.12}
               hoverThreshold={100}
+              imageStyle={{ objectFit: 'contain' }}
             />
           </Card>
         </div>

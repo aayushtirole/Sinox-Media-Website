@@ -28,6 +28,7 @@ interface LiquidBlobRevealProps {
   wobbleSpeed?: number;
   inertia?: number;
   hoverThreshold?: number;
+  imageStyle?: React.CSSProperties;
 }
 
 export default function LiquidBlobReveal({
@@ -39,6 +40,7 @@ export default function LiquidBlobReveal({
   wobbleSpeed = 0.8,
   inertia = 0.12,
   hoverThreshold = 100,
+  imageStyle,
 }: LiquidBlobRevealProps) {
   const wrapRef = useRef<HTMLDivElement>(null);
   
@@ -253,6 +255,7 @@ export default function LiquidBlobReveal({
         src={imageUrl}
         alt={alt}
         className="lbr-color w-full h-full object-cover"
+        style={imageStyle}
         draggable={false}
       />
 
@@ -261,7 +264,7 @@ export default function LiquidBlobReveal({
         src={imageUrl}
         alt=""
         className="lbr-gray absolute inset-0 w-full h-full object-cover pointer-events-none"
-        style={{ filter: "grayscale(100%)" }}
+        style={{ filter: "grayscale(100%)", ...imageStyle }}
         draggable={false}
         aria-hidden="true"
       />
