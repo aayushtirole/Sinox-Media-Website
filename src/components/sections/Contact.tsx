@@ -167,10 +167,15 @@ export default function Contact() {
                   <p className="text-muted-foreground mb-2">
                     Come say hello at our studio
                   </p>
-                  <p className="text-foreground font-semibold">
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=123+Creative+Street+Studio+City+CA+90210" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary font-semibold hover:underline cursor-pointer"
+                  >
                     123 Creative Street<br />
                     Studio City, CA 90210
-                  </p>
+                  </a>
                 </div>
               </div>
             </Card>
