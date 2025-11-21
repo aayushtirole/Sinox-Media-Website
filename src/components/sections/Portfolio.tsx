@@ -88,9 +88,9 @@ export default function Portfolio() {
                 <p className="text-muted-foreground">No portfolio items available</p>
               </div>
             ) : (
-              portfolioItems.map((item, index) => (
+              portfolioItems.map((item) => (
               <Card 
-                key={index}
+                key={item.id}
                 className="flex-shrink-0 w-[300px] xl:w-[360px] gradient-border overflow-hidden group cursor-pointer relative snap-start"
                 style={{ borderRadius: '1.5rem' }}
               >
@@ -100,12 +100,12 @@ export default function Portfolio() {
                     <path
                       d="M 0 0 L 0 32 Q 0 0 32 0 L 0 0"
                       fill="none"
-                      stroke="url(#gradient-tl-portfolio-${index})"
+                      stroke="url(#gradient-tl-portfolio-${item.id})"
                       strokeWidth="3"
                       className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     />
                     <defs>
-                      <linearGradient id={`gradient-tl-portfolio-${index}`} x1="0%" y1="0%" x2="100%" y2="100%">
+                      <linearGradient id={`gradient-tl-portfolio-${item.id}`} x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stopColor="#FF2E2E" />
                         <stop offset="100%" stopColor="#FF8A00" />
                       </linearGradient>
@@ -118,12 +118,12 @@ export default function Portfolio() {
                     <path
                       d="M 64 0 L 32 0 Q 64 0 64 32 L 64 0"
                       fill="none"
-                      stroke="url(#gradient-tr-portfolio-${index})"
+                      stroke="url(#gradient-tr-portfolio-${item.id})"
                       strokeWidth="3"
                       className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     />
                     <defs>
-                      <linearGradient id={`gradient-tr-portfolio-${index}`} x1="0%" y1="0%" x2="100%" y2="100%">
+                      <linearGradient id={`gradient-tr-portfolio-${item.id}`} x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stopColor="#FF8A00" />
                         <stop offset="100%" stopColor="#FF3E6C" />
                       </linearGradient>
@@ -136,12 +136,12 @@ export default function Portfolio() {
                     <path
                       d="M 0 64 L 0 32 Q 0 64 32 64 L 0 64"
                       fill="none"
-                      stroke="url(#gradient-bl-portfolio-${index})"
+                      stroke="url(#gradient-bl-portfolio-${item.id})"
                       strokeWidth="3"
                       className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     />
                     <defs>
-                      <linearGradient id={`gradient-bl-portfolio-${index}`} x1="0%" y1="100%" x2="100%" y2="0%">
+                      <linearGradient id={`gradient-bl-portfolio-${item.id}`} x1="0%" y1="100%" x2="100%" y2="0%">
                         <stop offset="0%" stopColor="#FF2E2E" />
                         <stop offset="100%" stopColor="#8C1EFF" />
                       </linearGradient>
@@ -154,12 +154,12 @@ export default function Portfolio() {
                     <path
                       d="M 64 64 L 32 64 Q 64 64 64 32 L 64 64"
                       fill="none"
-                      stroke="url(#gradient-br-portfolio-${index})"
+                      stroke="url(#gradient-br-portfolio-${item.id})"
                       strokeWidth="3"
                       className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     />
                     <defs>
-                      <linearGradient id={`gradient-br-portfolio-${index}`} x1="100%" y1="100%" x2="0%" y2="0%">
+                      <linearGradient id={`gradient-br-portfolio-${item.id}`} x1="100%" y1="100%" x2="0%" y2="0%">
                         <stop offset="0%" stopColor="#FF3E6C" />
                         <stop offset="100%" stopColor="#8C1EFF" />
                       </linearGradient>
@@ -170,7 +170,7 @@ export default function Portfolio() {
                 <div className="relative aspect-[9/16] overflow-hidden">
                   <img 
                     src={item.image_url}
-                    alt={item.title || `Short-form content ${index + 1}`}
+                    alt={item.title || item.type || "Portfolio content"}
                     className="w-full h-full object-cover transition-smooth group-hover:scale-110"
                   />
                   <div className="absolute bottom-4 left-4">
