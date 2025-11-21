@@ -37,7 +37,7 @@ export default function Portfolio() {
   return (
     <section id="shortform" className="py-20 xl:py-32 bg-background">
       <div className="container mx-auto px-4 xl:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <Badge variant="secondary" className="mb-4 px-4 py-2 text-sm font-semibold">
             Short-Form Content
           </Badge>
@@ -48,26 +48,28 @@ export default function Portfolio() {
             Short, high-retention edits — perfect for Reels & Shorts
           </p>
         </div>
+
+        {/* Navigation Buttons */}
+        <div className="flex justify-end gap-3 mb-8">
+          <button
+            onClick={() => scroll('left')}
+            className="w-12 h-12 rounded-full bg-background border-2 border-border shadow-md flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-110"
+            aria-label="Scroll left"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+
+          <button
+            onClick={() => scroll('right')}
+            className="w-12 h-12 rounded-full bg-background border-2 border-border shadow-md flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-110"
+            aria-label="Scroll right"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
         
         {/* Scrollable Container */}
         <div className="relative mb-12">
-          {/* Left Scroll Button */}
-          <button
-            onClick={() => scroll('left')}
-            className="hidden xl:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 z-10 w-14 h-14 rounded-full bg-background border-2 border-border shadow-lg items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-110"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-
-          {/* Right Scroll Button */}
-          <button
-            onClick={() => scroll('right')}
-            className="hidden xl:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 z-10 w-14 h-14 rounded-full bg-background border-2 border-border shadow-lg items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-110"
-            aria-label="Scroll right"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
 
           {/* Cards Container */}
           <div

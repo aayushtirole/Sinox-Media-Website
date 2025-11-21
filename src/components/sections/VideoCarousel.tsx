@@ -84,25 +84,27 @@ export default function VideoCarousel() {
           </p>
         </div>
 
-        {/* Scrollable Container */}
-        <div className="relative">
-          {/* Left Scroll Button */}
+        {/* Navigation Buttons */}
+        <div className="flex justify-end gap-3 mb-8">
           <button
             onClick={() => scroll('left')}
-            className="hidden xl:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 z-10 w-14 h-14 rounded-full bg-background border-2 border-border shadow-lg items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-110"
+            className="w-12 h-12 rounded-full bg-background border-2 border-border shadow-md flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-110"
             aria-label="Scroll left"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5" />
           </button>
 
-          {/* Right Scroll Button */}
           <button
             onClick={() => scroll('right')}
-            className="hidden xl:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 z-10 w-14 h-14 rounded-full bg-background border-2 border-border shadow-lg items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-110"
+            className="w-12 h-12 rounded-full bg-background border-2 border-border shadow-md flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-110"
             aria-label="Scroll right"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5" />
           </button>
+        </div>
+
+        {/* Scrollable Container */}
+        <div className="relative">
 
           {/* Cards Container */}
           <div
