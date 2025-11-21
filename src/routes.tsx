@@ -1,4 +1,5 @@
 import Index from './pages/Index';
+import AdminPage from './pages/AdminPage';
 import type { ReactNode } from 'react';
 
 interface RouteConfig {
@@ -13,6 +14,12 @@ const routes: RouteConfig[] = [
     name: 'Home',
     path: '/',
     element: <Index />
+  },
+  {
+    name: 'Admin',
+    path: '/admin',
+    element: <AdminPage />,
+    visible: false
   }
 ];
 
