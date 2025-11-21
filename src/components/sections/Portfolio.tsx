@@ -91,7 +91,7 @@ export default function Portfolio() {
               portfolioItems.map((item) => (
               <Card 
                 key={item.id}
-                className="flex-shrink-0 w-[300px] xl:w-[360px] gradient-border overflow-hidden group cursor-pointer relative snap-start p-0"
+                className="flex-shrink-0 w-[300px] xl:w-[360px] overflow-hidden group cursor-pointer relative snap-start p-0 border-2 border-border/40 hover:border-border/60 transition-colors duration-300"
                 style={{ borderRadius: '1.5rem' }}
               >
                 {/* Curved Corner Indicators */}
