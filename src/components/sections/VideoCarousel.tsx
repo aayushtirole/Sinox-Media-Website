@@ -117,7 +117,7 @@ export default function VideoCarousel() {
             {videoCards.map((video) => (
               <Card
                 key={video.id}
-                className="flex-shrink-0 w-[340px] xl:w-[400px] overflow-hidden group cursor-pointer hover:shadow-float transition-smooth snap-start relative video-card-swipe p-0"
+                className="flex-shrink-0 w-[340px] xl:w-[400px] gradient-border overflow-hidden group cursor-pointer hover:shadow-float transition-smooth snap-start relative video-card-swipe p-0"
                 style={{ borderRadius: '1.5rem' }}
               >
                 {/* Curved Corner Indicators */}
@@ -193,7 +193,7 @@ export default function VideoCarousel() {
                   </svg>
                 </div>
 
-                <div className="relative aspect-video overflow-hidden rounded-[1.5rem]">
+                <div className="relative aspect-video overflow-hidden rounded-[1.5rem] z-10">
                   <img
                     src={video.thumbnail}
                     alt={video.title}
@@ -204,7 +204,7 @@ export default function VideoCarousel() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   
                   {/* Title and Duration */}
-                  <div className="absolute bottom-4 left-4 right-4">
+                  <div className="absolute bottom-4 left-4 right-4 z-20">
                     <h3 className="text-white font-bold text-xl mb-2">
                       {video.title}
                     </h3>
@@ -214,14 +214,14 @@ export default function VideoCarousel() {
                   </div>
                   
                   {/* Category Badge - Top Left */}
-                  <div className="absolute top-4 left-4">
+                  <div className="absolute top-4 left-4 z-20">
                     <Badge variant="secondary" className="bg-background/90 backdrop-blur-sm">
                       {video.category}
                     </Badge>
                   </div>
                   
                   {/* Views Badge - Bottom Right */}
-                  <div className="absolute bottom-4 right-4">
+                  <div className="absolute bottom-4 right-4 z-20">
                     <Badge className="bg-primary/90 text-white border-0 flex items-center gap-1">
                       <Eye className="w-3 h-3" />
                       {video.views}

@@ -167,18 +167,18 @@ export default function Portfolio() {
                   </svg>
                 </div>
 
-                <div className="relative aspect-[9/16] overflow-hidden rounded-[1.5rem]">
+                <div className="relative aspect-[9/16] overflow-hidden rounded-[1.5rem] z-10">
                   <img 
                     src={item.image_url}
                     alt={item.title || item.type || "Portfolio content"}
                     className="w-full h-full object-cover transition-smooth group-hover:scale-110"
                   />
-                  <div className="absolute bottom-4 left-4">
+                  <div className="absolute bottom-4 left-4 z-20">
                     <Badge className="bg-background/90 backdrop-blur-sm text-foreground border-0 shadow-lg text-xs">
                       {item.type}
                     </Badge>
                   </div>
-                  <div className="absolute bottom-4 right-4">
+                  <div className="absolute bottom-4 right-4 z-20">
                     <Badge className="bg-primary/90 backdrop-blur-sm text-white border-0 shadow-lg">
                       <Eye className="w-3 h-3 mr-1" />
                       {item.views} Views
