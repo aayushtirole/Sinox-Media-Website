@@ -290,22 +290,6 @@ export default function GetStartedPage() {
               </form>
             </Form>
           </Card>
-
-          {/* Benefits Section */}
-          <div className="mt-12 grid grid-cols-1 xl:grid-cols-3 gap-6">
-            <Card className="p-6 text-center bg-secondary/30 border-0" style={{ borderRadius: "1.25rem" }}>
-              <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">Support Available</div>
-            </Card>
-            <Card className="p-6 text-center bg-secondary/30 border-0" style={{ borderRadius: "1.25rem" }}>
-              <div className="text-3xl font-bold text-primary mb-2">50+</div>
-              <div className="text-sm text-muted-foreground">Active Projects</div>
-            </Card>
-            <Card className="p-6 text-center bg-secondary/30 border-0" style={{ borderRadius: "1.25rem" }}>
-              <div className="text-3xl font-bold text-primary mb-2">100%</div>
-              <div className="text-sm text-muted-foreground">Client Satisfaction</div>
-            </Card>
-          </div>
         </div>
       </main>
     </div>
