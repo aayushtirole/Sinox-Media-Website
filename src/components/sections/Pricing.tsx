@@ -172,31 +172,24 @@ export default function Pricing() {
           {plans.map((plan, index) => (
             <Card
               key={index}
-              className={`p-8 transition-all duration-500 ease-out relative group cursor-pointer hover-tilt border-draw ${
-                plan.popular ? "gradient-border shadow-glow pulse-glow" : ""
-              } hover:scale-105 hover:shadow-2xl`}
+              className={`p-8 relative group cursor-pointer transition-all duration-300 hover:scale-[1.03] ${
+                plan.popular 
+                  ? "border-2 border-primary shadow-lg hover:border-primary hover:shadow-xl" 
+                  : "border border-border hover:border-primary/60 hover:shadow-lg"
+              }`}
               style={{ 
-                borderRadius: "1.75rem",
-                transition: "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)"
+                borderRadius: "1.75rem"
               }}
             >
-              {/* Hover Glow Effect */}
-              <div className="absolute inset-0 rounded-[1.75rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none glass-morph-hover"
-                style={{
-                  background: plan.popular 
-                    ? "linear-gradient(135deg, rgba(255, 46, 46, 0.05), rgba(255, 138, 0, 0.05), rgba(255, 62, 108, 0.05))"
-                    : "linear-gradient(135deg, rgba(255, 46, 46, 0.02), rgba(255, 138, 0, 0.02))"
-                }}
-              />
               
               {plan.popular && (
-                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground z-10 pulse-glow">
+                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground z-10">
                   Most Popular
                 </Badge>
               )}
               
               <div className="text-center mb-8 relative z-10">
-                <plan.icon className="w-12 h-12 text-primary mx-auto mb-4 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12" />
+                <plan.icon className="w-12 h-12 text-primary mx-auto mb-4 transition-transform duration-300 group-hover:scale-110" />
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                 <p className="text-muted-foreground mb-4">{plan.description}</p>
                 <div className="flex items-end justify-center gap-1">
@@ -216,11 +209,7 @@ export default function Pricing() {
               
               <Button
                 onClick={() => handleGetStarted(plan.name)}
-                className={`w-full py-6 rounded-full transition-all duration-500 relative z-10 text-white font-semibold hover-scale ${
-                  plan.popular
-                    ? "bg-primary hover:bg-primary/90 shadow-glow hover:shadow-glow-hover"
-                    : "bg-primary hover:bg-primary/90"
-                }`}
+                className="w-full py-6 rounded-full transition-all duration-300 relative z-10 bg-primary hover:bg-primary/90 text-white font-semibold"
               >
                 Get Started
               </Button>
