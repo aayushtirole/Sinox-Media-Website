@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check, Sparkles, Zap, Crown } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const pricingPlans = {
   india: [
@@ -115,16 +116,20 @@ const pricingPlans = {
 
 export default function Pricing() {
   const [region, setRegion] = useState<"india" | "international">("india");
+  const navigate = useNavigate();
   const plans = pricingPlans[region];
 
   const handleGetStarted = (planName: string) => {
-    // Scroll to contact section
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      
-      // Optional: Show a toast notification
-      console.log(`Selected plan: ${planName} (${region === 'india' ? 'India' : 'International'})`);
+    // Navigate to specific plan page based on plan name
+    const planRoutes: Record<string, string> = {
+      'Starter': '/plans/starter',
+      'Professional': '/plans/professional',
+      'Enterprise': '/plans/enterprise'
+    };
+    
+    const route = planRoutes[planName];
+    if (route) {
+      navigate(route);
     }
   };
 

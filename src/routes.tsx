@@ -1,5 +1,8 @@
 import Index from './pages/Index';
 import AdminPage from './pages/AdminPage';
+import StarterPage from './pages/StarterPage';
+import ProfessionalPage from './pages/ProfessionalPage';
+import EnterprisePage from './pages/EnterprisePage';
 import type { ReactNode } from 'react';
 
 interface RouteConfig {
@@ -14,6 +17,24 @@ const routes: RouteConfig[] = [
     name: 'Home',
     path: '/',
     element: <Index />
+  },
+  {
+    name: 'Starter Plan',
+    path: '/plans/starter',
+    element: <StarterPage />,
+    visible: false
+  },
+  {
+    name: 'Professional Plan',
+    path: '/plans/professional',
+    element: <ProfessionalPage />,
+    visible: false
+  },
+  {
+    name: 'Enterprise Plan',
+    path: '/plans/enterprise',
+    element: <EnterprisePage />,
+    visible: false
   },
   {
     name: 'Admin',

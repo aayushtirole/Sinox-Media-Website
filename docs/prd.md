@@ -55,8 +55,7 @@ To present Sinox Media as a luxury content studio, attract potential clients, sh
 
 #### 2.3.5 Elastic Snap Animations
 - Accordions and dropdowns open with rubber-band stretch effect
-- Scroll bounce on section end
-- Tab switches feature elastic transitions
+- Scroll bounce on section end\n- Tab switches feature elastic transitions
 \n#### 2.3.6 Scroll-Triggered Magnetic Sections
 - New sections automatically snap and stick during scroll
 - Content aligns smoothly like Apple product pages
@@ -110,16 +109,14 @@ To present Sinox Media as a luxury content studio, attract potential clients, sh
 - **Applied to**: Portfolio images, featured project cards, About section images
 
 #### 2.3.14 General Animation Timing
-- All effects: 0.3s ease-in-out standard
-- Scroll animations: fade-on-scroll with momentum
+- All effects: 0.3s ease-in-out standard\n- Scroll animations: fade-on-scroll with momentum
 - Card zoom: scale1.03on hover
 - Button elevation: lift + glow on hover
 \n### 2.4 Overall Feel
 Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutting-edge 2025 animation aesthetics\n
 ---
 
-## 3. Navigation Bar
-
+## 3. Navigation Bar\n
 ### 3.1 Layout & Structure
 - Sticky top navigation bar with floating pill design
 - White rounded rectangular bar anchored to top with soft drop shadow
@@ -166,8 +163,7 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - **Card Shadow**: Soft floating shadow (y-offset 12px, blur 32px, opacity 0.10)
 - **Border Style**: 2–3px gradient border (Red → Orange → Pink → Purple) with neon pulse animation (0-25% glow cycle)
 - **Spacing**: 24–32px horizontal gap between cards
-
-#### 4.2.3 Card Content Elements
+\n#### 4.2.3 Card Content Elements
 - **Video Thumbnail**: Full-width background image covering entire card with liquid blob mask reveal effect
 - **Overlay Gradient**: Subtle dark gradient from bottom (opacity 0.6) to transparent top with fluid morph effect
 - **Title Label**: Positioned at bottom-left corner\n  - White bold text (18–22px font size)
@@ -201,7 +197,7 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
   - 30s Reels with300K+ Views
   - 60s Shorts with 450K+ Views
   - 45s Reels with 520K+ Views
-  - Reference images: Screenshot 2025-11-21 005802.png, Screenshot 2025-11-21 005311.png
+  - Reference images: Screenshot2025-11-21 005802.png, Screenshot 2025-11-21 005311.png
 
 #### 4.2.5 Interactive States
 - **Hover Effect**: Card elevates with enhanced shadow (y-offset 16px, blur 40px) and 3D tilt with motion inertia
@@ -213,7 +209,7 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - **Transition**: All effects with 0.3s ease-in-out timing
 
 #### 4.2.6 Responsive Behavior
-- **Desktop**: Display 3–4 cards visible at once with horizontal scroll and GSAP momentum
+- **Desktop**: Display3–4 cards visible at once with horizontal scroll and GSAP momentum
 - **Tablet**: Display 2–3 cards visible with swipe gesture
 - **Mobile**: Display 1.2–1.5 cards visible with snap-to-card scroll behavior and elastic snap\n- **Navigation**: Optional left/right arrow buttons on desktop with magnetic hover for card navigation
 
@@ -226,7 +222,7 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Bold view count badges with neon glow
 - Soft gradient border on each card with pulse animation
 - Consistent grid spacing with scroll-triggered animations
-- Cards feature3D tilt on hover with motion inertia
+- Cards feature 3D tilt on hover with motion inertia
 - AI-style typographic animation for section headline
 - Liquid blob mask reveal effect on card images
 
@@ -242,8 +238,7 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Right: Faded gray text list with strikethrough fluid morph effect
 - Middle: Gradient-highlighted keyword with neon pulse
 - Premium whitespace with floating micro-particles
-- Stats row displaying with scroll-triggered magnetic alignment:\n  - Projects completed
-  - Total views
+- Stats row displaying with scroll-triggered magnetic alignment:\n  - Projects completed\n  - Total views
   - Years of experience
   - Revenue generated
 - Dynamic noise layer on background
@@ -259,9 +254,8 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 ### 4.8 Social Proof / Screenshot Collage
 - Large gradient-bordered card with animated neon pulse
 - Screenshots collage inside with fluid morph transitions
-- Smooth animation effects with 3D tilt on hover
-- Hover activated spotlight effect
-- Floating micro-particles overlay
+- Smooth animation effects with3D tilt on hover
+- Hover activated spotlight effect\n- Floating micro-particles overlay
 
 ### 4.9 Pricing Section
 - 3 pricing cards with identical size and spacing
@@ -270,38 +264,38 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Features list below price with elastic reveal on scroll
 - Primary red CTA button with magnetic hover and infrared glow
 - Hover: smooth elevation effect with 3D depth and neon pulse
-- Toggle switch: 'For Indian / Outside India' with fluid morph transition
+- Toggle switch:'For Indian / Outside India' with fluid morph transition
 - Cards feature perspective tilt on hover with motion inertia
 - Scroll-triggered magnetic section alignment
-
-### 4.10 About / Founders Section
+- **CTA Button Routing**:
+  - Each pricing card 'Get Started' button redirects to dedicated plan page
+  - Starter Plan button → /get-started/starter\n  - Professional Plan button → /get-started/professional
+  - Enterprise Plan button → /get-started/enterprise
+\n### 4.10 About / Founders Section
 - Left: Text content with AI-style typographic animations
 - Right: Image with gradient frame, neon pulse border, and liquid blob mask reveal effect
 - Headline: 'The Journey Behind Sinox Media' with scanner reveal effect
-- Premium whitespace with floating micro-particles\n- Stats row with scroll-triggered animations:
-  - 10,000+ Community\n  - 50+ Cohort
+- Premium whitespace with floating micro-particles\n- Stats row with scroll-triggered animations:\n  - 10,000+ Community\n  - 50+ Cohort
   - 4,000+ Videos
   - 98% Satisfaction\n- 3D depth parallax on image\n- Dynamic noise layer on background
 
 ### 4.11 About Section
 - Clean, centered layout with premium whitespace
 - Section headline: 'About Sinox Media' with AI-style scanner animation
-- Company introduction paragraph with fade-in reveal\n- Key highlights presented in grid format with elastic snap animations:
-  - Company founding year and vision
+- Company introduction paragraph with fade-in reveal
+- Key highlights presented in grid format with elastic snap animations:\n  - Company founding year and vision
   - Core services and expertise
   - Team composition and experience
   - Industry recognition or achievements
 - Subtle background with dynamic noise layer
-- Optional: Team photo or studio workspace image with 3D tilt on hover and liquid blob mask reveal
+- Optional: Team photo or studio workspace image with3D tilt on hover and liquid blob mask reveal
 - Consistent typography with rest of website
 - Red accent elements with neon pulse effect
 - Hover activated spotlight on key highlights
 
 ### 4.12 Comparison Section
 - Left card: 'Other Agencies' (gray background) with subtle animations
-- Right card: 'Sinox Media' (white + gradient frame with neon pulse)
-- Checkmarks and icon style comparison with elastic reveal
-- 'VS' connector in middle with magnetic hover effect
+- Right card: 'Sinox Media' (white + gradient frame with neon pulse)\n- Checkmarks and icon style comparison with elastic reveal\n- 'VS' connector in middle with magnetic hover effect
 - Cards feature smooth perspective flip on hover
 - 3D depth and motion inertia on interaction
 - Scroll-triggered magnetic alignment
@@ -331,14 +325,155 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 
 ---
 
-## 5. Technical Requirements
+## 5. Get Started Pages (New)
 
-### 5.1 Responsive Design
+### 5.1 Page Structure Overview
+- Three dedicated onboarding pages corresponding to pricing tiers
+- URL Routes:
+  - /get-started/starter
+  - /get-started/professional\n  - /get-started/enterprise
+- Consistent design language with main website
+- Premium animation effects throughout
+\n### 5.2 Common Page Elements
+\n#### 5.2.1 Header Section
+- Simplified navigation bar (logo + back to pricing link)
+- Plan name badge with neon pulse effect
+- Headline: 'Get Started with [Plan Name]' with AI-style scanner reveal
+- Subtext highlighting plan benefits
+\n#### 5.2.2 Page Layout
+- Two-column layout (desktop) / single column (mobile)
+- Left column: Plan summary card with gradient border and neon pulse
+- Right column: Multi-step form with elastic transitions
+\n#### 5.2.3 Plan Summary Card
+- Plan icon with floating animation
+- Plan name and pricing display
+- Key features list with checkmarks
+- Sticky positioning on scroll (desktop)
+-3D depth effect on hover
+
+#### 5.2.4 Onboarding Form
+- Multi-step progress indicator with magnetic transitions
+- Form fields with smooth focus animations
+- Input validation with real-time feedback
+- Step transitions with fluid morph effects
+\n### 5.3 Form Steps
+\n#### Step 1: Contact Information
+- Full name (required)
+- Email address (required)
+- Phone number (optional)
+- Company name (required for Professional/Enterprise)\n\n#### Step 2: Project Details
+- Project type selection (dropdown with magnetic hover)
+- Content goals (multi-select checkboxes)
+- Timeline preferences (radio buttons with elastic animation)
+- Additional notes (textarea)\n
+#### Step 3: Schedule Consultation
+- Calendar widget with date picker (smooth transitions)
+- Time slot selection with magnetic hover
+- Timezone selector\n\n#### Step 4: Payment Setup (Professional/Enterprise only)
+- Payment method selection\n- Billing information form
+- Terms acceptance checkbox
+\n#### Step 5: Confirmation
+- Order summary with plan details
+- Final CTA: 'Confirm & Start' button with infrared glow
+- Alternative: 'Schedule Call Instead' link
+\n### 5.4 Page-Specific Customization
+
+#### 5.4.1 Starter Plan Page(/get-started/starter)
+- Simplified 3-step form (Contact → Project → Schedule)
+- Emphasis on quick onboarding
+- CTA: 'Start Your Journey' with magnetic hover
+- Background: Soft gradient with floating particles
+\n#### 5.4.2 Professional Plan Page (/get-started/professional)
+- Full5-step form with payment setup
+- Featured badge: 'Most Popular' with neon pulse
+- Additional section: Content strategy questionnaire
+- CTA: 'Activate Professional Plan' with enhanced glow
+- Background: Dynamic noise layer with gradient accents
+
+#### 5.4.3 Enterprise Plan Page (/get-started/enterprise)\n- Custom consultation-focused flow
+- Emphasis on dedicated account manager
+- Additional fields: Team size, custom requirements
+- CTA: 'Schedule Enterprise Consultation' with premium animation
+- Background: Premium gradient with sophisticated particle system
+
+### 5.5 Interactive Features
+
+#### 5.5.1 Form Animations
+- Field focus: Magnetic label lift with neon underline
+- Input typing: Smooth character reveal\n- Validation: Elastic shake on error, smooth checkmark on success
+- Step navigation: Fluid morph transitions between steps
+
+#### 5.5.2 Progress Tracking
+- Animated progress bar with gradient fill
+- Step indicators with magnetic hover
+- Completion percentage display
+- Smooth transitions between steps
+
+#### 5.5.3 Error Handling
+- Inline validation with smooth error messages
+- Elastic bounce animation on invalid submission
+- Clear error state indicators with red accent
+- Helpful tooltips with magnetic hover
+
+### 5.6 Confirmation & Next Steps
+
+#### 5.6.1 Success State
+- Full-screen confirmation animation with cinematic sweep
+- Checkmark icon with neon pulse effect
+- Personalized welcome message
+- Next steps timeline with AI-style reveal
+
+#### 5.6.2 Email Confirmation
+- Automated confirmation email sent\n- Calendar invite for scheduled consultation
+- Welcome package with onboarding resources
+- Account setup instructions
+
+#### 5.6.3 Redirect Options
+- Dashboard access (for Professional/Enterprise)
+- Resource center link
+- Contact support option
+- Return to homepage\n
+### 5.7 Design Specifications
+
+#### 5.7.1 Color Scheme
+- Consistent with main website palette
+- Plan-specific accent colors:\n  - Starter: Light red (#FF6B6B)
+  - Professional: Primary red (#FF2E2E)\n  - Enterprise: Deep red (#C91F1F) with gold accents
+\n#### 5.7.2 Typography
+- Form labels: 14px, medium weight
+- Input text: 16px, regular weight\n- Headings: Bold, AI-style scanner reveal
+- Error messages: 12px, red color
+\n#### 5.7.3 Spacing & Layout
+- Form field vertical spacing: 24px
+- Section padding: 48px
+- Card border-radius: 24px
+- Button padding: 16px 32px
+\n### 5.8 Responsive Behavior
+
+#### 5.8.1 Desktop (1200px+)
+- Two-column layout with sticky summary card
+- Full animation effects enabled
+- Magnetic hover interactions active
+\n#### 5.8.2 Tablet (768px - 1199px)
+- Single column layout\n- Summary card at top (non-sticky)
+- Simplified animations
+
+#### 5.8.3 Mobile (< 768px)
+- Vertical stack layout
+- Collapsible summary card
+- Touch-optimized form fields
+- Simplified particle effects
+
+---
+
+## 6. Technical Requirements
+
+### 6.1 Responsive Design
 - Fully responsive across desktop, tablet, and mobile devices
 - Maintain premium spacing and visual hierarchy on all screen sizes
 - Adaptive animation complexity based on device performance
 
-### 5.2 Performance\n- Smooth animations without lag (60fps target)
+### 6.2 Performance\n- Smooth animations without lag (60fps target)
 - Optimized image loading with lazy loading
 - Fast page transitions with cinematic sweep effects
 - Lazy loading for video card thumbnails
@@ -347,11 +482,12 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Dynamic noise layer optimized for performance
 - Liquid blob mask effect optimized with requestAnimationFrame
 
-### 5.3 Interactive Elements
+### 6.3 Interactive Elements
 - Magnetic hover effects on all buttons and cards
 - Smooth scroll behavior with GSAP momentum and inertia
 - Horizontal swipe/drag functionality for video cards
-- Snap-to-card scroll behavior on mobile with elastic snap\n- Accordion functionality in FAQ section with rubber-band stretch
+- Snap-to-card scroll behavior on mobile with elastic snap
+- Accordion functionality in FAQ section with rubber-band stretch
 - Tab switching in Industry Insights section with fluid morph
 - Toggle switch in Pricing section with smooth transition
 - Sticky navigation bar with scroll behavior and magnetic effects
@@ -362,17 +498,20 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Hover activated spotlight following cursor
 - Live cursor trail (subtle)\n- Floating micro-particles system
 - Page transition cinematic sweep effects
-- Smooth perspective flip cards\n- Scroll-triggered magnetic section alignment
+- Smooth perspective flip cards
+- Scroll-triggered magnetic section alignment
 - Interactive liquid blob mask reveal effect with cursor tracking and touch support
-
-### 5.4 Animation Libraries & Technologies
+- Multi-step form navigation with fluid transitions
+- Real-time form validation with elastic animations
+- Calendar widget with smooth date selection
+\n### 6.4 Animation Libraries & Technologies
 - GSAP (GreenSock Animation Platform) for scroll momentum and complex animations
-- CSS3 transforms and transitions for performance\n- WebGL for particle systems and advanced effects
+- CSS3transforms and transitions for performance\n- WebGL for particle systems and advanced effects
 - Intersection Observer API for scroll-triggered animations
 - RequestAnimationFrame for smooth 60fps rendering
 - SVG filters and masks for liquid blob reveal effect
 - Vanilla JavaScript for blob mask cursor tracking and touch handling
-\n### 5.5 Database & Data Storage
+\n### 6.5 Database & Data Storage
 - **Database System**: Relational database (MySQL/PostgreSQL) or NoSQL (MongoDB) based on data structure requirements
 - **Data Storage Requirements**:
   - **Portfolio Content**: Store video metadata (title, duration, thumbnail path, view counts, category tags)
@@ -383,6 +522,8 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
   - **User Sessions**: Store booking requests, trial sign-ups, consultation schedules
   - **FAQ Content**: Store questions, answers, category tags for easy management
   - **Company Stats**: Store and update metrics (projects completed, views, community size, satisfaction rate)
+  - **Onboarding Data**: Store get-started form submissions (contact info, project details, consultation schedules, payment info)
+  - **User Accounts**: Store user profiles for Professional/Enterprise clients (login credentials, plan details, project history)
 - **Data Management Features**:
   - CRUD operations for all content sections
   - Admin dashboard for content updates
@@ -390,22 +531,40 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
   - Data validation and sanitization
   - Secure API endpoints for data retrieval
   - Caching layer for frequently accessed data
+  - Form submission handling with email notifications
+  - Calendar integration for consultation scheduling
 - **Security Measures**:
   - Encrypted data transmission (HTTPS/SSL)
   - SQL injection prevention
   - Input validation and sanitization
-  - Regular security audits
-  - Secure authentication for admin access
-\n---
+  - Regular security audits\n  - Secure authentication for admin access
+  - PCI compliance for payment processing
+\n### 6.6 Routing & Navigation
+- Client-side routing for smooth page transitions
+- URL structure:\n  - Main pages: /, /process, /portfolio, /pricing, /about
+  - Get Started pages: /get-started/starter, /get-started/professional, /get-started/enterprise
+- Browser history management
+- Deep linking support\n- 404 error page with navigation back to home
+\n### 6.7 Form Handling
+- Client-side validation with real-time feedback
+- Server-side validation for security
+- AJAX form submission without page reload
+- Progress saving (local storage backup)
+- Email confirmation system
+- Calendar API integration for scheduling
+- Payment gateway integration (Stripe/PayPal)
 
-## 6. Content Guidelines
+---
 
-### 6.1 Tone & Voice
+## 7. Content Guidelines
+
+### 7.1 Tone & Voice
 - Professional and premium\n- Confident and authoritative
 - Clear and concise
 - Client-focused
 - Modern and innovative
-\n### 6.2 Imagery
+
+### 7.2 Imagery
 - High-quality portfolio reels and screenshots
 - Professional client testimonial videos
 - Clean product/service visuals
@@ -415,7 +574,7 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 
 ---
 
-## 7. Key Features Summary
+## 8. Key Features Summary
 
 - BM Studios-inspired sticky navigation bar with Sinox Media red branding and magnetic hover effects
 - Premium BM Studios-inspired layout with Sinox Media red branding and 2025 ultra-modern animations
@@ -428,7 +587,12 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
 - Standard About section with company information and floating particles
 - Competitive comparison section with perspective flip cards
 - Industry insights with categorized tabs and fluid morph transitions
-- Comprehensive FAQ section with elastic snap accordions\n- Professional footer with social links and dynamic noise layer
+- Comprehensive FAQ section with elastic snap accordions
+- Professional footer with social links and dynamic noise layer
+- **Three dedicated Get Started pages with plan-specific onboarding flows**
+- **Multi-step form system with real-time validation and smooth transitions**
+- **Calendar integration for consultation scheduling**
+- **Payment processing for Professional and Enterprise plans**
 - Database-driven content management system for all dynamic sections
 - Cutting-edge 2025 animation system including:\n  - Magnetic hover effects throughout
   - Fluid morph transitions
@@ -443,13 +607,12 @@ Premium, modern, minimal, clean, cinematic, luxury content studio vibe with cutt
   - Hover activated spotlight
   - Page transition cinematic sweep\n  - Live cursor trail (minimal)
   - Interactive liquid blob mask reveal effect with organic animation and touch support
+\n---
 
----
-
-## 8. Reference Images
+## 9. Reference Images
 
 - image.png: Brand Documentary card design reference
 - image.png: Podcast Interview studio setup card
 - image.png: Product Deep Dive creator filming card
-- Screenshot 2025-11-21 005802.png: Additional video card variations with view counts
+- Screenshot2025-11-21 005802.png: Additional video card variations with view counts
 - Screenshot 2025-11-21 005311.png: Video card grid layout reference
