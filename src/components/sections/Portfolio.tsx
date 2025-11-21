@@ -91,7 +91,7 @@ export default function Portfolio() {
               portfolioItems.map((item) => (
               <Card 
                 key={item.id}
-                className="flex-shrink-0 w-[300px] xl:w-[360px] gradient-border overflow-hidden group cursor-pointer relative snap-start"
+                className="flex-shrink-0 w-[300px] xl:w-[360px] gradient-border overflow-hidden group cursor-pointer relative snap-start p-0"
                 style={{ borderRadius: '1.5rem' }}
               >
                 {/* Curved Corner Indicators */}
@@ -167,7 +167,7 @@ export default function Portfolio() {
                   </svg>
                 </div>
 
-                <div className="relative aspect-[9/16] overflow-hidden">
+                <div className="relative aspect-[9/16] overflow-hidden rounded-[1.5rem]">
                   <img 
                     src={item.image_url}
                     alt={item.title || item.type || "Portfolio content"}

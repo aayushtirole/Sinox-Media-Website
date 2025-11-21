@@ -117,7 +117,7 @@ export default function VideoCarousel() {
             {videoCards.map((video) => (
               <Card
                 key={video.id}
-                className="flex-shrink-0 w-[340px] xl:w-[400px] overflow-hidden group cursor-pointer hover:shadow-float transition-smooth snap-start relative video-card-swipe"
+                className="flex-shrink-0 w-[340px] xl:w-[400px] overflow-hidden group cursor-pointer hover:shadow-float transition-smooth snap-start relative video-card-swipe p-0"
                 style={{ borderRadius: '1.5rem' }}
               >
                 {/* Curved Corner Indicators */}
@@ -193,7 +193,7 @@ export default function VideoCarousel() {
                   </svg>
                 </div>
 
-                <div className="relative aspect-video overflow-hidden">
+                <div className="relative aspect-video overflow-hidden rounded-[1.5rem]">
                   <img
                     src={video.thumbnail}
                     alt={video.title}
