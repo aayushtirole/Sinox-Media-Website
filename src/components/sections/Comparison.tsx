@@ -1,5 +1,4 @@
 import { Card } from "@/components/ui/card";
-import { StatCard } from "@/components/ui/stat-card";
 import { X, Check, Zap } from "lucide-react";
 
 const comparisonPoints = [
@@ -205,32 +204,24 @@ export default function Comparison() {
             </Card>
           </div>
 
-          {/* Bottom Stats with Animated Counting */}
+          {/* Bottom Stats */}
           <div className="mt-20 grid grid-cols-2 xl:grid-cols-4 gap-6">
-            <StatCard
-              value={100}
-              label="Client Satisfaction"
-              suffix="%"
-              duration={1400}
-            />
-            <StatCard
-              value={50}
-              label="Active Projects"
-              suffix="+"
-              duration={1200}
-            />
-            <StatCard
-              value={4000}
-              label="Videos Delivered"
-              suffix="+"
-              duration={1600}
-            />
-            <StatCard
-              value={24}
-              label="Support Available"
-              suffix="/7"
-              duration={1000}
-            />
+            <Card className="p-6 text-center bg-secondary/30 border-0 transition-transform hover:scale-105" style={{ borderRadius: '20px' }}>
+              <div className="text-3xl font-bold text-primary mb-1">100%</div>
+              <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+            </Card>
+            <Card className="p-6 text-center bg-secondary/30 border-0 transition-transform hover:scale-105" style={{ borderRadius: '20px' }}>
+              <div className="text-3xl font-bold text-primary mb-1">50+</div>
+              <div className="text-sm text-muted-foreground">Active Projects</div>
+            </Card>
+            <Card className="p-6 text-center bg-secondary/30 border-0 transition-transform hover:scale-105" style={{ borderRadius: '20px' }}>
+              <div className="text-3xl font-bold text-primary mb-1">4,000+</div>
+              <div className="text-sm text-muted-foreground">Videos Delivered</div>
+            </Card>
+            <Card className="p-6 text-center bg-secondary/30 border-0 transition-transform hover:scale-105" style={{ borderRadius: '20px' }}>
+              <div className="text-3xl font-bold text-primary mb-1">24/7</div>
+              <div className="text-sm text-muted-foreground">Support Available</div>
+            </Card>
           </div>
         </div>
       </div>
