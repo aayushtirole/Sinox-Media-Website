@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const menuItems = [
   { label: "Home", href: "#home" },
@@ -10,31 +10,10 @@ const menuItems = [
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const progress = (window.scrollY / totalHeight) * 100;
-      setScrollProgress(progress);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <nav className="sinox-nav">
       <div className="nav-inner">
-        {/* Scroll Progress Bar */}
-        <div 
-          className="absolute bottom-0 left-0 h-1 bg-primary transition-all duration-300 ease-out"
-          style={{ 
-            width: `${scrollProgress}%`,
-            borderRadius: '0 0 16px 16px'
-          }}
-        />
-        
         {/* Logo */}
         <a href="#home" className="logo-square hover-scale">
           SM
