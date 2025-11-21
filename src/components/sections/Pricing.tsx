@@ -117,6 +117,17 @@ export default function Pricing() {
   const [region, setRegion] = useState<"india" | "international">("india");
   const plans = pricingPlans[region];
 
+  const handleGetStarted = (planName: string) => {
+    // Scroll to contact section
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      
+      // Optional: Show a toast notification
+      console.log(`Selected plan: ${planName} (${region === 'india' ? 'India' : 'International'})`);
+    }
+  };
+
   return (
     <section className="py-20 xl:py-32 bg-secondary/30">
       <div className="container mx-auto px-4 xl:px-8">
@@ -199,6 +210,7 @@ export default function Pricing() {
               </ul>
               
               <Button
+                onClick={() => handleGetStarted(plan.name)}
                 className={`w-full py-6 rounded-full transition-all duration-300 relative z-10 text-white font-semibold hover-scale ${
                   plan.popular
                     ? "bg-primary hover:bg-primary/90 shadow-glow hover:shadow-glow-hover"
