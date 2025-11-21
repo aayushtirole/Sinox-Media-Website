@@ -31,7 +31,7 @@ export default function Navigation() {
         {/* Desktop CTAs */}
         <div className="nav-right">
           <button 
-            className="btn-primary ripple"
+            className="btn-primary"
             onClick={() => {
               const contactSection = document.getElementById('contact');
               contactSection?.scrollIntoView({ behavior: 'smooth' });

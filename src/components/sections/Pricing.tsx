@@ -199,7 +199,7 @@ export default function Pricing() {
               </ul>
               
               <Button
-                className={`w-full py-6 rounded-full transition-all duration-300 relative z-10 text-white font-semibold ripple hover-scale ${
+                className={`w-full py-6 rounded-full transition-all duration-300 relative z-10 text-white font-semibold hover-scale ${
                   plan.popular
                     ? "bg-primary hover:bg-primary/90 shadow-glow hover:shadow-glow-hover"
                     : "bg-primary hover:bg-primary/90"

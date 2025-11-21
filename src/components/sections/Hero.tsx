@@ -33,7 +33,7 @@ export default function Hero() {
           <div className="flex justify-center items-center pt-4 fade-in-up stagger-4">
             <Button 
               size="lg" 
-              className="px-8 py-6 text-lg rounded-full bg-primary hover:bg-primary-hover shadow-glow hover:shadow-glow-hover transition-smooth ripple hover-scale"
+              className="px-8 py-6 text-lg rounded-full bg-primary hover:bg-primary-hover shadow-glow hover:shadow-glow-hover transition-smooth hover-scale"
               onClick={() => {
                 const contactSection = document.getElementById('contact');
                 contactSection?.scrollIntoView({ behavior: 'smooth' });
