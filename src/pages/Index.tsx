@@ -5,6 +5,7 @@ import VideoCarousel from "@/components/sections/VideoCarousel";
 import Services from "@/components/sections/Services";
 import Pricing from "@/components/sections/Pricing";
 import About from "@/components/sections/About";
+import Comparison from "@/components/sections/Comparison";
 import IndustryInsights from "@/components/sections/IndustryInsights";
 import FAQ from "@/components/sections/FAQ";
 import Contact from "@/components/sections/Contact";
@@ -28,6 +29,7 @@ export default function Index() {
       <div id="about">
         <About />
       </div>
+      <Comparison />
       <IndustryInsights />
       <FAQ />
       <Contact />
