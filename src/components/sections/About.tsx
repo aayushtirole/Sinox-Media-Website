@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import LiquidBlobReveal from "@/components/ui/LiquidBlobReveal";
 
 export default function About() {
   const stats = [
@@ -56,14 +57,16 @@ export default function About() {
             className="gradient-border overflow-hidden"
             style={{ borderRadius: '1.75rem' }}
           >
-            <div className="relative aspect-[4/5]">
-              <img 
-                src="https://miaoda-site-img.s3cdn.medo.dev/images/ce4420c7-1b93-4afe-b644-d4ad847d699d.jpg"
-                alt="Sinox Media Team"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-            </div>
+            <LiquidBlobReveal
+              imageUrl="https://miaoda-conversation-file.s3cdn.medo.dev/user-7nfgxgyfjw1s/conv-7nfh0jg65o8w/20251122/file-7pse31cqr8xs.png"
+              alt="The Journey Behind Sinox Media - Office workspace"
+              className="aspect-[4/5]"
+              blobSize={250}
+              blurAmount={45}
+              wobbleSpeed={0.8}
+              inertia={0.12}
+              hoverThreshold={100}
+            />
           </Card>
         </div>
       </div>
