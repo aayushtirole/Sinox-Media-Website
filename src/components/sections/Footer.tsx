@@ -84,7 +84,14 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>123 Creative Street, Studio City, CA 90210</span>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=123+Creative+Street+Studio+City+CA+90210" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-smooth"
+                >
+                  123 Creative Street, Studio City, CA 90210
+                </a>
               </li>
             </ul>
           </div>
