@@ -31,6 +31,9 @@ export default {
                 ring: 'hsl(var(--ring))',
                 background: 'hsl(var(--background))',
                 foreground: 'hsl(var(--foreground))',
+                'soft-gray': 'hsl(var(--soft-gray))',
+                'light-border': 'hsl(var(--light-border))',
+                'secondary-text': 'hsl(var(--secondary-text))',
                 primary: {
                     DEFAULT: 'hsl(var(--primary))',
                     foreground: 'hsl(var(--primary-foreground))',
@@ -59,6 +62,11 @@ export default {
                 card: {
                     DEFAULT: 'hsl(var(--card))',
                     foreground: 'hsl(var(--card-foreground))'
+                },
+                gradient: {
+                    orange: 'hsl(var(--gradient-orange))',
+                    pink: 'hsl(var(--gradient-pink))',
+                    purple: 'hsl(var(--gradient-purple))'
                 },
                 education: {
                     blue: 'hsl(var(--education-blue))',
