@@ -166,17 +166,17 @@ All colors MUST be HSL.
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    animation: gradient-border-flow-lr 3s linear infinite;
+    animation: gradient-border-flow-rl 3s linear infinite;
     pointer-events: none;
     z-index: 1;
   }
   
-  @keyframes gradient-border-flow-lr {
+  @keyframes gradient-border-flow-rl {
     0% {
-      background-position: 0% 50%;
+      background-position: 100% 50%;
     }
     100% {
-      background-position: 100% 50%;
+      background-position: 0% 50%;
     }
   }
   
