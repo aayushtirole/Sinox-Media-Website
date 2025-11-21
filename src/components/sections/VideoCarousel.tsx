@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Eye, ChevronLeft, ChevronRight } from "lucide-react";
+import { Eye } from "lucide-react";
 import { useRef } from "react";
 
 interface VideoCard {
@@ -58,49 +58,16 @@ const videoCards: VideoCard[] = [
 export default function VideoCarousel() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollContainerRef.current) {
-      const scrollAmount = 400;
-      const newScrollPosition = direction === 'left' 
-        ? scrollContainerRef.current.scrollLeft - scrollAmount
-        : scrollContainerRef.current.scrollLeft + scrollAmount;
-      
-      scrollContainerRef.current.scrollTo({
-        left: newScrollPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
-
   return (
     <section className="py-20 xl:py-32 bg-background">
       <div className="container mx-auto px-4 xl:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h2 className="text-4xl xl:text-5xl font-bold mb-4">
             Featured <span className="gradient-text">Video Collection</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Swipe through our premium video portfolio showcasing diverse content styles
           </p>
-        </div>
-
-        {/* Navigation Buttons */}
-        <div className="flex justify-end gap-3 mb-8">
-          <button
-            onClick={() => scroll('left')}
-            className="w-12 h-12 rounded-full bg-background border-2 border-border shadow-md flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-110"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-
-          <button
-            onClick={() => scroll('right')}
-            className="w-12 h-12 rounded-full bg-background border-2 border-border shadow-md flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-110"
-            aria-label="Scroll right"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
         </div>
 
         {/* Scrollable Container */}
