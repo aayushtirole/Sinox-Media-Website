@@ -1,9 +1,15 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
@@ -14,96 +20,42 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { ArrowLeft, CheckCircle2, Loader2 } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
 
-interface FormData {
-  fullName: string;
-  email: string;
-  phone: string;
-  company: string;
-  serviceInterest: string;
-  message: string;
-}
+const formSchema = z.object({
+  fullName: z.string().min(2, "Full name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email address"),
+  phone: z.string().min(10, "Please enter a valid phone number"),
+  company: z.string().optional(),
+  serviceInterest: z.string().min(1, "Please select a service"),
+  message: z.string().optional(),
+});
 
 export default function GetStartedPage() {
   const navigate = useNavigate();
   const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState<FormData>({
-    fullName: "",
-    email: "",
-    phone: "",
-    company: "",
-    serviceInterest: "",
-    message: "",
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      fullName: "",
+      email: "",
+      phone: "",
+      company: "",
+      serviceInterest: "",
+      message: "",
+    },
   });
 
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSelectChange = (value: string) => {
-    setFormData((prev) => ({ ...prev, serviceInterest: value }));
-  };
-
-  const validateForm = (): boolean => {
-    if (!formData.fullName.trim()) {
-      toast({
-        title: "Validation Error",
-        description: "Please enter your full name",
-        variant: "destructive",
-      });
-      return false;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      toast({
-        title: "Validation Error",
-        description: "Please enter a valid email address",
-        variant: "destructive",
-      });
-      return false;
-    }
-
-    if (!formData.phone.trim()) {
-      toast({
-        title: "Validation Error",
-        description: "Please enter your phone number",
-        variant: "destructive",
-      });
-      return false;
-    }
-
-    if (!formData.serviceInterest) {
-      toast({
-        title: "Validation Error",
-        description: "Please select a service you're interested in",
-        variant: "destructive",
-      });
-      return false;
-    }
-
-    return true;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!validateForm()) {
-      return;
-    }
-
-    setIsSubmitting(true);
-
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
       // Log form data (in production, this would be sent to your backend)
-      console.log("Trial signup data:", formData);
+      console.log("Trial signup data:", values);
 
       toast({
         title: "Success! 🎉",
@@ -111,14 +63,7 @@ export default function GetStartedPage() {
       });
 
       // Reset form
-      setFormData({
-        fullName: "",
-        email: "",
-        phone: "",
-        company: "",
-        serviceInterest: "",
-        message: "",
-      });
+      form.reset();
 
       // Navigate back to home after 2 seconds
       setTimeout(() => {
@@ -130,8 +75,6 @@ export default function GetStartedPage() {
         description: "Something went wrong. Please try again.",
         variant: "destructive",
       });
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -175,141 +118,177 @@ export default function GetStartedPage() {
 
           {/* Form Card */}
           <Card className="p-8 xl:p-12" style={{ borderRadius: "1.75rem" }}>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Full Name */}
-              <div className="space-y-2">
-                <Label htmlFor="fullName" className="text-base font-medium">
-                  Full Name <span className="text-primary">*</span>
-                </Label>
-                <Input
-                  id="fullName"
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                {/* Full Name */}
+                <FormField
+                  control={form.control}
                   name="fullName"
-                  type="text"
-                  placeholder="John Doe"
-                  value={formData.fullName}
-                  onChange={handleInputChange}
-                  className="h-12 rounded-xl"
-                  required
-                />
-              </div>
-
-              {/* Email & Phone */}
-              <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-base font-medium">
-                    Email Address <span className="text-primary">*</span>
-                  </Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="john@example.com"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="h-12 rounded-xl"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="phone" className="text-base font-medium">
-                    Phone Number <span className="text-primary">*</span>
-                  </Label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    placeholder="+1 (555) 000-0000"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="h-12 rounded-xl"
-                    required
-                  />
-                </div>
-              </div>
-
-              {/* Company Name */}
-              <div className="space-y-2">
-                <Label htmlFor="company" className="text-base font-medium">
-                  Company Name <span className="text-muted-foreground text-sm">(Optional)</span>
-                </Label>
-                <Input
-                  id="company"
-                  name="company"
-                  type="text"
-                  placeholder="Your Company Inc."
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  className="h-12 rounded-xl"
-                />
-              </div>
-
-              {/* Service Interest */}
-              <div className="space-y-2">
-                <Label htmlFor="serviceInterest" className="text-base font-medium">
-                  Service Interest <span className="text-primary">*</span>
-                </Label>
-                <Select value={formData.serviceInterest} onValueChange={handleSelectChange}>
-                  <SelectTrigger className="h-12 rounded-xl">
-                    <SelectValue placeholder="Select a service" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="content">Content Creation</SelectItem>
-                    <SelectItem value="shootings">Professional Shootings</SelectItem>
-                    <SelectItem value="ideations">Creative Ideation</SelectItem>
-                    <SelectItem value="packaging">Content Packaging</SelectItem>
-                    <SelectItem value="distribution">Strategic Distribution</SelectItem>
-                    <SelectItem value="full-service">Full Service Package</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              {/* Message */}
-              <div className="space-y-2">
-                <Label htmlFor="message" className="text-base font-medium">
-                  Tell us about your project <span className="text-muted-foreground text-sm">(Optional)</span>
-                </Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  placeholder="Share your vision, goals, and what you hope to achieve..."
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  className="min-h-32 rounded-xl resize-none"
-                />
-              </div>
-
-              {/* Submit Button */}
-              <div className="pt-4">
-                <Button
-                  type="submit"
-                  size="lg"
-                  disabled={isSubmitting}
-                  className="w-full h-14 rounded-full bg-primary hover:bg-primary-hover shadow-glow transition-smooth text-lg font-semibold disabled:opacity-70 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                      Submitting...
-                    </>
-                  ) : (
-                    "Start My Trial"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-base font-medium">
+                        Full Name <span className="text-primary">*</span>
+                      </FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="John Doe"
+                          className="h-12 rounded-xl"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
                   )}
-                </Button>
-              </div>
+                />
 
-              {/* Terms */}
-              <p className="text-sm text-muted-foreground text-center pt-2">
-                By submitting this form, you agree to our{" "}
-                <a href="#" className="text-primary hover:underline">
-                  Terms of Service
-                </a>{" "}
-                and{" "}
-                <a href="#" className="text-primary hover:underline">
-                  Privacy Policy
-                </a>
-              </p>
-            </form>
+                {/* Email & Phone */}
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-base font-medium">
+                          Email Address <span className="text-primary">*</span>
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            type="email"
+                            placeholder="john@example.com"
+                            className="h-12 rounded-xl"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-base font-medium">
+                          Phone Number <span className="text-primary">*</span>
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            type="tel"
+                            placeholder="+1 (555) 000-0000"
+                            className="h-12 rounded-xl"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
+                {/* Company Name */}
+                <FormField
+                  control={form.control}
+                  name="company"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-base font-medium">
+                        Company Name <span className="text-muted-foreground text-sm">(Optional)</span>
+                      </FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="Your Company Inc."
+                          className="h-12 rounded-xl"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                {/* Service Interest */}
+                <FormField
+                  control={form.control}
+                  name="serviceInterest"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-base font-medium">
+                        Service Interest <span className="text-primary">*</span>
+                      </FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="h-12 rounded-xl">
+                            <SelectValue placeholder="Select a service" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="content">Content Creation</SelectItem>
+                          <SelectItem value="shootings">Professional Shootings</SelectItem>
+                          <SelectItem value="ideations">Creative Ideation</SelectItem>
+                          <SelectItem value="packaging">Content Packaging</SelectItem>
+                          <SelectItem value="distribution">Strategic Distribution</SelectItem>
+                          <SelectItem value="full-service">Full Service Package</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                {/* Message */}
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-base font-medium">
+                        Tell us about your project <span className="text-muted-foreground text-sm">(Optional)</span>
+                      </FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Share your vision, goals, and what you hope to achieve..."
+                          className="min-h-32 rounded-xl resize-none"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                {/* Submit Button */}
+                <div className="pt-4">
+                  <Button
+                    type="submit"
+                    size="lg"
+                    disabled={form.formState.isSubmitting}
+                    className="w-full h-14 rounded-full bg-primary hover:bg-primary-hover shadow-glow transition-smooth text-lg font-semibold disabled:opacity-70 disabled:cursor-not-allowed"
+                  >
+                    {form.formState.isSubmitting ? (
+                      <>
+                        <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                        Submitting...
+                      </>
+                    ) : (
+                      "Start My Trial"
+                    )}
+                  </Button>
+                </div>
+
+                {/* Terms */}
+                <p className="text-sm text-muted-foreground text-center pt-2">
+                  By submitting this form, you agree to our{" "}
+                  <a href="#" className="text-primary hover:underline">
+                    Terms of Service
+                  </a>{" "}
+                  and{" "}
+                  <a href="#" className="text-primary hover:underline">
+                    Privacy Policy
+                  </a>
+                </p>
+              </form>
+            </Form>
           </Card>
 
           {/* Benefits Section */}
