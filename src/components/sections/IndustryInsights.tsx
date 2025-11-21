@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Video, Camera, Lightbulb, Package, Share2 } from "lucide-react";
+import { Video, Camera, Lightbulb, Package, Share2, Loader2 } from "lucide-react";
 
 const tabs = [
   { id: "content", label: "Content", icon: Video },
@@ -64,9 +64,23 @@ const tabContent = {
   }
 };
 
+// Trial checkout URL - replace with your actual trial page URL
+const TRIAL_URL = "https://sinoxmedia.com/trial";
+
 export default function IndustryInsights() {
   const [activeTab, setActiveTab] = useState("content");
+  const [isLoading, setIsLoading] = useState(false);
   const content = tabContent[activeTab as keyof typeof tabContent];
+
+  const handleTrialClick = () => {
+    setIsLoading(true);
+    // Open trial page in new tab
+    window.open(TRIAL_URL, '_blank');
+    // Reset loading state after a short delay
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  };
 
   return (
     <section className="py-20 xl:py-32 bg-background">
@@ -116,9 +130,18 @@ export default function IndustryInsights() {
             </ul>
             <Button 
               size="lg"
-              className="px-8 py-6 rounded-full bg-primary hover:bg-primary-hover shadow-glow transition-smooth"
+              onClick={handleTrialClick}
+              disabled={isLoading}
+              className="px-8 py-6 rounded-full bg-primary hover:bg-primary-hover shadow-glow transition-smooth disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              Start 2-Week Paid Trial
+              {isLoading ? (
+                <>
+                  <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                  Loading...
+                </>
+              ) : (
+                "Start 1-Week Paid Trial"
+              )}
             </Button>
           </Card>
         </div>
