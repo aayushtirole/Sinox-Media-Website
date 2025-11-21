@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Eye } from "lucide-react";
+import { Eye, ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
 
 interface VideoCard {
@@ -89,19 +89,19 @@ export default function VideoCarousel() {
           {/* Left Scroll Button */}
           <button
             onClick={() => scroll('left')}
-            className="hidden xl:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 rounded-full bg-background shadow-float items-center justify-center hover:bg-primary hover:text-white transition-smooth"
+            className="hidden xl:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 z-10 w-14 h-14 rounded-full bg-background border-2 border-border shadow-lg items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-110"
             aria-label="Scroll left"
           >
-            ←
+            <ChevronLeft className="w-6 h-6" />
           </button>
 
           {/* Right Scroll Button */}
           <button
             onClick={() => scroll('right')}
-            className="hidden xl:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 rounded-full bg-background shadow-float items-center justify-center hover:bg-primary hover:text-white transition-smooth"
+            className="hidden xl:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 z-10 w-14 h-14 rounded-full bg-background border-2 border-border shadow-lg items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-110"
             aria-label="Scroll right"
           >
-            →
+            <ChevronRight className="w-6 h-6" />
           </button>
 
           {/* Cards Container */}
