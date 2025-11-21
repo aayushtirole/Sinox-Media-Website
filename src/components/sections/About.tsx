@@ -54,19 +54,19 @@ export default function About() {
           </div>
           
           <Card 
-            className="gradient-border overflow-hidden bg-white p-4"
+            className="gradient-border overflow-hidden"
             style={{ borderRadius: '1.75rem' }}
           >
             <LiquidBlobReveal
-              imageUrl="https://miaoda-conversation-file.s3cdn.medo.dev/user-7nfgxgyfjw1s/conv-7nfh0jg65o8w/20251122/file-7pse31cqr8xs.png"
-              alt="The Journey Behind Sinox Media - Office workspace"
+              imageUrl="https://miaoda-conversation-file.s3cdn.medo.dev/user-7nfgxgyfjw1s/conv-7nfh0jg65o8w/20251122/file-7ptbt51duwao.png"
+              alt="The Journey Behind Sinox Media - Modern office workspace"
               className="aspect-[4/5]"
               blobSize={250}
               blurAmount={45}
               wobbleSpeed={0.8}
               inertia={0.12}
               hoverThreshold={100}
-              imageStyle={{ objectFit: 'contain' }}
+              imageStyle={{ objectFit: 'cover' }}
             />
           </Card>
         </div>
