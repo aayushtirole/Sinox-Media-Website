@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Sparkles, Zap, Star } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -12,22 +11,6 @@ export default function Hero() {
           background: 'linear-gradient(135deg, hsl(0 0% 98%), hsl(0 100% 59% / 0.05), hsl(25 100% 50% / 0.05), hsl(0 0% 100%))',
         }}
       />
-      
-      {/* Floating Elements */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 float-subtle opacity-20">
-          <Sparkles className="w-12 h-12 text-primary" />
-        </div>
-        <div className="absolute top-1/3 right-1/4 float-animation opacity-20" style={{ animationDelay: '1s' }}>
-          <Zap className="w-16 h-16 text-gradient-orange" />
-        </div>
-        <div className="absolute bottom-1/3 left-1/3 float-subtle opacity-20" style={{ animationDelay: '2s' }}>
-          <Star className="w-10 h-10 text-gradient-pink" />
-        </div>
-        <div className="absolute top-1/2 right-1/3 float-animation opacity-20" style={{ animationDelay: '0.5s' }}>
-          <Sparkles className="w-14 h-14 text-gradient-purple" />
-        </div>
-      </div>
       
       <div className="container mx-auto px-4 xl:px-8 py-20 xl:py-32 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-8">
