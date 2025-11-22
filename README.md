@@ -1,96 +1,109 @@
-# Welcome to Your Miaoda Project
-Miaoda Application Link URL
-    URL:https://medo.dev/projects/app-7nfh0jg65o8x
+Sinox Media — Project Documentation
 
-# Welcome to Your Miaoda Project
+Welcome to the official codebase of Sinox Media, a modern content-production platform built with a scalable and performance-oriented architecture.
+This document provides a complete overview of the project structure, tech stack, setup instructions, and development guidelines.
 
-## Project Info
+🔗 Project Access
 
-## Project Directory
+Live Project URL:
 
-```
-├── README.md # Documentation
-├── components.json # Component library configuration
-├── eslint.config.js # ESLint configuration
-├── index.html # Entry file
-├── package.json # Package management
-├── postcss.config.js # PostCSS configuration
-├── public # Static resources directory
-│   ├── favicon.png # Icon
-│   └── images # Image resources
-├── src # Source code directory
-│   ├── App.tsx # Entry file
-│   ├── components # Components directory
-│   ├── context # Context directory
-│   ├── db # Database configuration directory
-│   ├── hooks # Common hooks directory
-│   ├── index.css # Global styles
-│   ├── layout # Layout directory
-│   ├── lib # Utility library directory
-│   ├── main.tsx # Entry file
-│   ├── routes.tsx # Routing configuration
-│   ├── pages # Pages directory
-│   ├── services # Database interaction directory
-│   ├── types # Type definitions directory
-├── tsconfig.app.json # TypeScript frontend configuration file
-├── tsconfig.json # TypeScript configuration file
-├── tsconfig.node.json # TypeScript Node.js configuration file
-└── vite.config.ts # Vite configuration file
-```
 
-## Tech Stack
+📌 Overview
 
-Vite, TypeScript, React, Supabase
+Sinox Media is designed to deliver a seamless user experience using a modular React + TypeScript architecture.
+The project follows clean coding standards, reusability practices, and dependency-driven structure for long-term scalability.
 
-## Development Guidelines
+This README helps developers quickly get started with the codebase and understand all dependencies and workflows.
 
-### How to edit code locally?
+📁 Project Structure
+├── README.md                 # Documentation
+├── components.json           # Component library configuration
+├── eslint.config.js          # Code linting rules
+├── index.html                # Application entry point
+├── package.json              # NPM project configuration
+├── postcss.config.js         # PostCSS setup
+├── public                    # Static resources
+│   ├── favicon.png
+│   └── images
+├── src
+│   ├── App.tsx               # Root React component
+│   ├── components            # Reusable UI components
+│   ├── context               # Global context providers
+│   ├── db                    # Database & Supabase setup
+│   ├── hooks                 # Custom React hooks
+│   ├── index.css             # Global styles
+│   ├── layout                # App layout components
+│   ├── lib                   # Utility helpers
+│   ├── main.tsx              # Application bootstrap
+│   ├── routes.tsx            # Routing system
+│   ├── pages                 # Application pages
+│   ├── services              # API & database services
+│   ├── types                 # TypeScript interfaces
+├── tsconfig.app.json         # TS config (frontend)
+├── tsconfig.json             # Main TypeScript config
+├── tsconfig.node.json        # TS Node.js config
+└── vite.config.ts            # Vite bundler configuration
 
-You can choose [VSCode](https://code.visualstudio.com/Download) or any IDE you prefer. The only requirement is to have Node.js and npm installed.
+🛠 Tech Stack
+Layer	Technology
+Frontend	React, TypeScript, Vite
+Backend	Supabase Services
+Styling	Tailwind / CSS
+Build Tool	Vite
+Package Manager	npm
+⚙️ System Requirements
 
-### Environment Requirements
+Ensure the following versions or above:
 
-```
-# Node.js ≥ 20
-# npm ≥ 10
-Example:
-# node -v   # v20.18.3
-# npm -v    # 10.8.2
-```
+Node.js ≥ 20
+npm ≥ 10
 
-### Installing Node.js on Windows
+Check versions:
+node -v
+npm -v
 
-```
-# Step 1: Visit the Node.js official website: https://nodejs.org/, click download. The website will automatically suggest a suitable version (32-bit or 64-bit) for your system.
-# Step 2: Run the installer: Double-click the downloaded installer to run it.
-# Step 3: Complete the installation: Follow the installation wizard to complete the process.
-# Step 4: Verify installation: Open Command Prompt (cmd) or your IDE terminal, and type `node -v` and `npm -v` to check if Node.js and npm are installed correctly.
-```
+💻 Installation Guide
+1️⃣ Install Node.js
 
-### Installing Node.js on macOS
+Windows:
 
-```
-# Step 1: Using Homebrew (Recommended method): Open Terminal. Type the command `brew install node` and press Enter. If Homebrew is not installed, you need to install it first by running the following command in Terminal:
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-Alternatively, use the official installer: Visit the Node.js official website. Download the macOS .pkg installer. Open the downloaded .pkg file and follow the prompts to complete the installation.
-# Step 2: Verify installation: Open Command Prompt (cmd) or your IDE terminal, and type `node -v` and `npm -v` to check if Node.js and npm are installed correctly.
-```
+1. Visit https://nodejs.org/
+2. Download recommended version
+3. Install and verify:
+   node -v
+   npm -v
 
-### After installation, follow these steps:
 
-```
-# Step 1: Download the code package
-# Step 2: Extract the code package
-# Step 3: Open the code package with your IDE and navigate into the code directory
-# Step 4: In the IDE terminal, run the command to install dependencies: npm i
-# Step 5: In the IDE terminal, run the command to start the development server: npm run dev -- --host 127.0.0.1
-# Step 6: if step 5 failed, try this command to start the development server: npx vite --host 127.0.0.1
-```
+macOS:
 
-### How to develop backend services?
+1. Install via Homebrew:
+   brew install node
+OR
+2. Download .pkg installer from nodejs.org
 
-Configure environment variables and install relevant dependencies.If you need to use a database, please use the official version of Supabase.
+Verify:
+node -v
+npm -v
 
-## Learn More
+🚀 Running the Project
+1. Download the project files
+2. Extract the folder
+3. Open it in VSCode or any IDE
+4. Install dependencies:
+   npm i
+5. Start the development server:
+   npm run dev -- --host 127.0.0.1
+6. If that fails:
+   npx vite --host 127.0.0.1
 
-You can also check the help documentation: Download and Building the app（ [https://intl.cloud.baidu.com/en/doc/MIAODA/s/download-and-building-the-app-en](https://intl.cloud.baidu.com/en/doc/MIAODA/s/download-and-building-the-app-en)）to learn more detailed content.
+🗄 Backend / Supabase Setup
+
+If using authentication, database, or storage:
+
+Configure .env variables
+
+Setup Supabase tables & policies
+
+Update service modules under /src/services
+
+Use official Supabase instance for production reliability
