@@ -160,7 +160,7 @@ All colors MUST be HSL.
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    padding: 2.5px;
+    padding: 3px;
     background: linear-gradient(90deg, hsl(0 100% 59%), hsl(25 100% 50%), hsl(340 100% 62%), hsl(280 100% 56%), hsl(0 100% 59%));
     background-size: 300% 100%;
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -169,6 +169,7 @@ All colors MUST be HSL.
     animation: gradient-border-flow-rl 3s linear infinite;
     pointer-events: none;
     z-index: 1;
+    opacity: 1;
   }
   
   @keyframes gradient-border-flow-rl {
