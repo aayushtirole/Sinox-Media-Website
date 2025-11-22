@@ -37,7 +37,8 @@ export default {
                 primary: {
                     DEFAULT: 'hsl(var(--primary))',
                     foreground: 'hsl(var(--primary-foreground))',
-                    hover: 'hsl(var(--primary-hover))'
+                    hover: 'hsl(var(--primary-hover))',
+                    2: 'hsl(25 100% 50%)'
                 },
                 secondary: {
                     DEFAULT: 'hsl(var(--secondary))',

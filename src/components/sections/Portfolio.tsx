@@ -5,6 +5,34 @@ import { useRef, useEffect, useState } from "react";
 import { getPortfolioItems } from "@/db/api";
 import type { PortfolioItem } from "@/types/types";
 
+// Fallback sample data
+const fallbackItems: PortfolioItem[] = [
+  {
+    id: "fallback-1",
+    title: "Brand Story Reel",
+    type: "30s Reels",
+    views: "250K+",
+    image_url: "https://picsum.photos/400/711?random=1",
+    description: null,
+    display_order: 1,
+    is_featured: true,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
+  },
+  {
+    id: "fallback-2",
+    title: "Product Showcase",
+    type: "60s Shorts",
+    views: "180K+",
+    image_url: "https://picsum.photos/400/711?random=2",
+    description: null,
+    display_order: 2,
+    is_featured: true,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
+  }
+];
+
 export default function Portfolio() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [portfolioItems, setPortfolioItems] = useState<PortfolioItem[]>([]);
@@ -13,9 +41,24 @@ export default function Portfolio() {
   useEffect(() => {
     async function loadPortfolioItems() {
       setLoading(true);
-      const items = await getPortfolioItems();
-      setPortfolioItems(items);
-      setLoading(false);
+      try {
+        const items = await getPortfolioItems();
+        console.log("Portfolio items fetched:", items);
+        
+        // Use fallback if no items returned
+        if (!items || items.length === 0) {
+          console.log("No items from database, using fallback data");
+          setPortfolioItems(fallbackItems);
+        } else {
+          setPortfolioItems(items);
+        }
+      } catch (error) {
+        console.error("Error fetching portfolio items:", error);
+        console.log("Using fallback data due to error");
+        setPortfolioItems(fallbackItems);
+      } finally {
+        setLoading(false);
+      }
     }
     loadPortfolioItems();
   }, []);
