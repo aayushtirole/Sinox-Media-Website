@@ -452,6 +452,16 @@ All colors MUST be HSL.
       opacity: 1;
     }
   }
+  
+  /* Hide Scrollbar */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* NAVBAR CSS - BM Studios Style Exact Replica */

@@ -1,5 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import BrandCarousel from "@/components/ui/brand-carousel";
+
+const brands = [
+  { id: "1", name: "BRAND" },
+  { id: "2", name: "BRAND" },
+  { id: "3", name: "BRAND" },
+  { id: "4", name: "BRAND" },
+  { id: "5", name: "BRAND" },
+];
 
 export default function Hero() {
   return (
@@ -45,13 +54,7 @@ export default function Hero() {
           
           <div className="pt-12 xl:pt-16 fade-in-up stagger-5">
             <p className="text-sm text-muted-foreground mb-6">Trusted by leading brands</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 xl:gap-12 opacity-60">
-              <div className="text-2xl font-bold hover-scale cursor-pointer">BRAND</div>
-              <div className="text-2xl font-bold hover-scale cursor-pointer">BRAND</div>
-              <div className="text-2xl font-bold hover-scale cursor-pointer">BRAND</div>
-              <div className="text-2xl font-bold hover-scale cursor-pointer">BRAND</div>
-              <div className="text-2xl font-bold hover-scale cursor-pointer">BRAND</div>
-            </div>
+            <BrandCarousel brands={brands} speed={30} />
           </div>
         </div>
       </div>
