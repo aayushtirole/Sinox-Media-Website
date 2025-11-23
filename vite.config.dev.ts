@@ -33,7 +33,7 @@
 
     // 包装原来的 send 方法
     const _send = server.ws.send;
-    server.ws.send = (payload) => {
+    server.ws.send = (payload: any) => {
       if (hmrEnabled) {
         return _send.call(server.ws, payload);
       } else {
